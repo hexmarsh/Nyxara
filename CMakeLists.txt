@@ -18,15 +18,5 @@ project("Nyxara"
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-# Add the executable target
-add_executable(Nyxara 
-	"src/Nyxara.cpp" 
-	"src/engine/logging/logger.h"
-	"src/engine/logging/logger.cpp"
-)
-
-find_package(spdlog CONFIG REQUIRED)
-find_package(glm CONFIG REQUIRED)
-
-# Link dependencies
-target_link_libraries(Nyxara PRIVATE spdlog::spdlog glm::glm)
+add_subdirectory(core)
+add_subdirectory(engine)

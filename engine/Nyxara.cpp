@@ -1,4 +1,4 @@
-﻿#include "engine/logging/logger.h"
+﻿#include "nyxara/logging/logger.h"
 
 NYX_DEFINE_LOG_CATEGORY(renderer);
 
