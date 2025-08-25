@@ -16,7 +16,7 @@ namespace nyxara::logging
         if (_initialized) return;
 
         spdlog::set_pattern("[%T] [%n] [%^%l%$] %v");
-        spdlog::set_level(spdlog::level::off); // disable global logging, use per-category levels
+        spdlog::set_level(spdlog::level::info);
 
         _initialized = true;
     }
