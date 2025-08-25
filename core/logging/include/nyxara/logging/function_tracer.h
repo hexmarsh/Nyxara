@@ -31,6 +31,6 @@ namespace nyxara::logging
         static thread_local int _call_depth;
     };
 
-    thread_local int function_tracer::_call_depth = 0;
+    inline thread_local int function_tracer::_call_depth = 0;
 } // namespace nyxara::logging
 
