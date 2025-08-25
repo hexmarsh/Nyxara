@@ -1,0 +1,14 @@
+{
+  "name": "nyxara",
+  "version": "0.1.0",
+  "dependencies": [
+    {
+      "name": "glm",
+      "version>=": "1.0.1"
+    },
+    {
+      "name": "spdlog",
+      "version>=": "1.15.3"
+    }
+  ]
+}
