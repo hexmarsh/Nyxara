@@ -8,7 +8,7 @@ namespace nyxara::logging
         std::scoped_lock lock(_init_mutex);
         if (_initialized) return;
 
-        spdlog::set_pattern("[%T] [%n] [%^%l%$] %v");
+        // Set global default level
         spdlog::set_level(spdlog::level::info);
 
         _initialized = true;
@@ -50,6 +50,9 @@ namespace nyxara::logging
 
         auto new_logger = spdlog::stdout_color_mt(name);
         
+        // Set the pattern for this specific logger
+        spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v");
+
         // Set default level for new loggers
         new_logger->set_level(to_spdlog_level(verbosity::info));
         

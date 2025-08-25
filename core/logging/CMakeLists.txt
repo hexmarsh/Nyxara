@@ -7,6 +7,7 @@ add_library(nyxara_logging
 	include/nyxara/logging/function_tracer.h
 	include/nyxara/logging/verbosity.h
 	include/nyxara/logging/category.h
+	include/nyxara/logging/call_depth.h
 	src/logging/category.cpp
 )
 

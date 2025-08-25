@@ -11,10 +11,14 @@
             ::nyxara::logging::logger::log(CAT, LEVEL, __VA_ARGS__)
 
 // Convenience macros
-#define NYX_LOG_FATAL(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::verbosity::fatal, __VA_ARGS__)
+#define NYX_LOG_CRITICAL(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::verbosity::critical, __VA_ARGS__)
 #define NYX_LOG_ERROR(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::verbosity::error, __VA_ARGS__)
 #define NYX_LOG_WARN(CAT, ...)  NYX_LOG(CAT, ::nyxara::logging::verbosity::warn,  __VA_ARGS__)
 #define NYX_LOG_INFO(CAT, ...)  NYX_LOG(CAT, ::nyxara::logging::verbosity::info,  __VA_ARGS__)
 #define NYX_LOG_DEBUG(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::verbosity::debug, __VA_ARGS__)
 #define NYX_LOG_TRACE(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::verbosity::trace, __VA_ARGS__)
 #define NYX_TRACE_FUNCTION(CAT) ::nyxara::logging::function_tracer tracer(CAT, __func__)
+
+// Call depth management macros
+#define NYX_ENABLE_CALL_DEPTH() ::nyxara::logging::logger::enable_call_depth(true)
+#define NYX_DISABLE_CALL_DEPTH() ::nyxara::logging::logger::enable_call_depth(false)

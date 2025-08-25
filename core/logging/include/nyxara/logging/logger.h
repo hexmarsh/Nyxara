@@ -7,6 +7,7 @@
 
 #include "nyxara/logging/category.h"
 #include "nyxara/logging/verbosity.h"
+#include "nyxara/logging/call_depth.h"
 
 // forward declarations
 namespace spdlog { class logger; }
@@ -27,12 +28,25 @@ namespace nyxara::logging
             if (level > cat_level) return;
 
             auto logger_ptr = cat.get_logger();
-            if (logger_ptr->should_log(to_spdlog_level(level))) {
-                logger_ptr->log(to_spdlog_level(level), fmt_str, std::forward<Args>(args)...);
+
+            if (logger_ptr->should_log(to_spdlog_level(level)))
+            {
+                if (!call_depth_manager::is_enabled())
+                {
+                    logger_ptr->log(to_spdlog_level(level), fmt_str, std::forward<Args>(args)...);
+                    return;
+                }
+
+                std::string indented_message = call_depth_manager::get_indentation() + fmt::format(fmt_str, std::forward<Args>(args)...);
+                logger_ptr->log(to_spdlog_level(level), "{}", indented_message);
             }
         }
 
         static std::shared_ptr<spdlog::logger> get_or_create_logger(const std::string& name);
+
+        // Call depth management for normal logging
+        static void enable_call_depth(bool enabled = true) { call_depth_manager::set_enabled(enabled); }
+        static bool is_call_depth_enabled() { return call_depth_manager::is_enabled(); }
 
     private:
         static verbosity get_category_level(const std::string& cat_name);
