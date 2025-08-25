@@ -1,5 +1,6 @@
 ﻿#include "nyxara/logging/logger.h"
 #include "nyxara/logging/macros.h"
+#include "nyxara/math/types.h"
 #include <iostream>
 
 NYX_DEFINE_LOG_CATEGORY(renderer);
