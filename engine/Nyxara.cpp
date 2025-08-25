@@ -25,12 +25,10 @@ void log_test()
 }
 
 int main() {
-	NYX_SET_LOG_LEVEL(renderer, nyxara::logging::verbosity::trace);
-	NYX_ENABLE_CALL_DEPTH();
-
-	log_test();
-
 	nyxara::logging::logger::init();
 
-	//return 0;
+	NYX_SET_LOG_LEVEL(renderer, nyxara::logging::verbosity::trace);
+	NYX_LOG_ENABLE_CALL_DEPTH();
+
+	log_test();
 }

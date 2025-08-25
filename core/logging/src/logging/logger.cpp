@@ -3,15 +3,14 @@
 
 namespace nyxara::logging
 {
+    std::once_flag _init_flag;
+
     void logger::init()
     {
-        std::scoped_lock lock(_init_mutex);
-        if (_initialized) return;
-
-        // Set global default level
-        spdlog::set_level(spdlog::level::info);
-
-        _initialized = true;
+        std::call_once(_init_flag, []() {
+            spdlog::set_level(spdlog::level::info);
+            spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v");
+            });
     }
 
     void logger::set_category_level(const category& cat, verbosity level)
@@ -19,8 +18,8 @@ namespace nyxara::logging
         std::unique_lock lock(_levels_mutex);
         _category_levels[cat.get_name()] = level;
         
-        // Also update the spdlog logger's level
         auto logger_ptr = cat.get_logger();
+
         if (logger_ptr)
         {
             logger_ptr->set_level(to_spdlog_level(level));
@@ -29,36 +28,15 @@ namespace nyxara::logging
 
     std::shared_ptr<spdlog::logger> logger::get_or_create_logger(const std::string& name)
     {
+        std::shared_ptr<spdlog::logger> existing_logger = spdlog::get(name);
+
+        if (existing_logger)
         {
-            std::shared_lock read_lock(_loggers_mutex);
-            auto it = _loggers.find(name);
-            if (it != _loggers.end())
-            {
-                return it->second; // logger already exists - fast path
-            }
+            return existing_logger;
         }
 
-        // Upgrade to unique lock if logger not found
-        std::unique_lock write_lock(_loggers_mutex);
+        std::shared_ptr<spdlog::logger> new_logger = spdlog::stdout_color_mt(name);
 
-        // Double check after acquiring write lock
-        auto it = _loggers.find(name);
-        if (it != _loggers.end())
-        {
-            return it->second;
-        }
-
-        auto new_logger = spdlog::stdout_color_mt(name);
-
-        constexpr const char* pattern = "[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v";
-        
-        // Set the pattern for this specific logger
-        new_logger->set_pattern(pattern);
-
-        // Set default level for new loggers
-        new_logger->set_level(to_spdlog_level(verbosity::info));
-        
-        _loggers[name] = new_logger;
         return new_logger;
     }
 

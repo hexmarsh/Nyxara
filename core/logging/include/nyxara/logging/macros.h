@@ -20,5 +20,5 @@
 #define NYX_TRACE_FUNCTION(CAT) ::nyxara::logging::function_tracer tracer(CAT, __func__)
 
 // Call depth management macros
-#define NYX_ENABLE_CALL_DEPTH() ::nyxara::logging::logger::enable_call_depth(true)
-#define NYX_DISABLE_CALL_DEPTH() ::nyxara::logging::logger::enable_call_depth(false)
+#define NYX_LOG_ENABLE_CALL_DEPTH() ::nyxara::logging::logger::enable_call_depth(true)
+#define NYX_LOG_DISABLE_CALL_DEPTH() ::nyxara::logging::logger::enable_call_depth(false)
