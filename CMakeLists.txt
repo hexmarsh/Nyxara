@@ -21,8 +21,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 # Add the executable target
 add_executable(Nyxara 
 	"src/Nyxara.cpp" 
-	src/engine/logger.h
-	src/engine/logger.cpp
+	"src/engine/logging/logger.h"
+	"src/engine/logging/logger.cpp"
 )
 
 find_package(spdlog CONFIG REQUIRED)
