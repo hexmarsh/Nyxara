@@ -10,7 +10,8 @@ namespace nyxara::logging
         static int get_depth() noexcept { return _call_depth; }
         static void increment() noexcept { ++_call_depth; }
         static void decrement() noexcept { --_call_depth; }
-        static std::string get_indentation() { return std::string(_call_depth * 2, ' '); }
+        
+        static int get_indentation_count() noexcept { return _call_depth * 2; }
         
         static void set_enabled(bool enabled) noexcept { _enabled = enabled; }
         static bool is_enabled() noexcept { return _enabled; }

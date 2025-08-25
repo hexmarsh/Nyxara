@@ -37,8 +37,13 @@ namespace nyxara::logging
                     return;
                 }
 
-                std::string indented_message = call_depth_manager::get_indentation() + fmt::format(fmt_str, std::forward<Args>(args)...);
-                logger_ptr->log(to_spdlog_level(level), "{}", indented_message);
+                // Avoid all allocations by formatting spaces and message directly into buffer
+                fmt::memory_buffer buffer;
+                auto appender = fmt::appender(buffer);
+                fmt::format_to(appender, "{:{}}", "", call_depth_manager::get_indentation_count());
+                fmt::format_to(appender, fmt_str, std::forward<Args>(args)...);
+
+                logger_ptr->log(to_spdlog_level(level), fmt::string_view(buffer.data(), buffer.size()));
             }
         }
 

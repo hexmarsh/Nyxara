@@ -49,9 +49,11 @@ namespace nyxara::logging
         }
 
         auto new_logger = spdlog::stdout_color_mt(name);
+
+        constexpr const char* pattern = "[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v";
         
         // Set the pattern for this specific logger
-        spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v");
+        new_logger->set_pattern(pattern);
 
         // Set default level for new loggers
         new_logger->set_level(to_spdlog_level(verbosity::info));

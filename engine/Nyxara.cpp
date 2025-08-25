@@ -13,8 +13,7 @@ void* operator new(size_t size)
 void nested_log_test()
 {
 	NYX_TRACE_FUNCTION(renderer);
-	constexpr const char* msg = "This is critical";
-	NYX_LOG_CRITICAL(renderer, msg);
+	NYX_LOG_CRITICAL(renderer, "This is critical");
 	NYX_LOG_ERROR(renderer, "This is an error");
 }
 
