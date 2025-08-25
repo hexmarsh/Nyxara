@@ -1,7 +1,6 @@
 #pragma once
 #include <memory>
 #include <shared_mutex>
-#include <spdlog/fmt/fmt.h>
 #include <string>
 #include <unordered_map>
 
