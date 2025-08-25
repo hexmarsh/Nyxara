@@ -11,7 +11,7 @@ namespace nyxara::logging
         function_tracer(const category& cat, const char* func)
             : _category(cat), _func(func)
         {
-            logger::log(_category, verbosity::trace, "{}=> Entering: {}",
+            logger::log(_category, verbosity::trace, "{}=> Entering: {}()",
                 std::string(_call_depth * 2, ' '), _func);
 
             ++_call_depth;
@@ -21,7 +21,7 @@ namespace nyxara::logging
         {
             --_call_depth;
 
-            logger::log(_category, verbosity::trace, "{}<= Leaving:  {}",
+            logger::log(_category, verbosity::trace, "{}<= Leaving:  {}()",
                 std::string(_call_depth * 2, ' '), _func);
         }
 
