@@ -31,5 +31,10 @@ int main() {
 	NYX_SET_LOG_LEVEL(renderer, nyxara::logging::verbosity::trace);
 	NYX_LOG_ENABLE_CALL_DEPTH();
 
+	nyxara::math::vec3 myvec1(1.0f, 1.0f, 1.0f);
+	nyxara::math::vec3 myvec2(1.0f, 1.0f, 1.0f);
+
+	nyxara::math::vec3 summed = myvec1 + myvec2;
+
 	log_test();
 }
