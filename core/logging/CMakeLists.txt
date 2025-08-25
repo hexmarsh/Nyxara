@@ -2,8 +2,13 @@ find_package(spdlog CONFIG REQUIRED)
 
 add_library(nyxara_logging
 	include/nyxara/logging/logger.h
+	src/logging/logger.cpp
 	include/nyxara/logging/macros.h
-	src/logging/logger.cpp)
+	include/nyxara/logging/function_tracer.h
+	include/nyxara/logging/verbosity.h
+	include/nyxara/logging/category.h
+	src/logging/category.cpp
+)
 
 target_include_directories(nyxara_logging
 	PUBLIC

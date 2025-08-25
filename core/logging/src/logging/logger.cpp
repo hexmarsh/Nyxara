@@ -3,13 +3,6 @@
 
 namespace nyxara::logging
 {
-    category::category(std::string name)
-        : _name(std::move(name))
-    {
-        // Cache logger pointer on construction to avoid repeated lookups
-        _logger = logger::get_or_create_logger(_name);
-    }
-
     void logger::init()
     {
         std::scoped_lock lock(_init_mutex);

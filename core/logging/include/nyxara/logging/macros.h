@@ -1,4 +1,5 @@
 #pragma once
+#include "nyxara/logging/function_tracer.h"
 #include "nyxara/logging/logger.h"
 
 #define NYX_DEFINE_LOG_CATEGORY(Name) static ::nyxara::logging::category Name(#Name)
@@ -16,3 +17,4 @@
 #define NYX_LOG_INFO(CAT, ...)  NYX_LOG(CAT, ::nyxara::logging::verbosity::info,  __VA_ARGS__)
 #define NYX_LOG_DEBUG(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::verbosity::debug, __VA_ARGS__)
 #define NYX_LOG_TRACE(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::verbosity::trace, __VA_ARGS__)
+#define NYX_TRACE_FUNCTION(CAT) ::nyxara::logging::function_tracer tracer(CAT, __func__)
