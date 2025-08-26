@@ -1,5 +1,6 @@
 #pragma once
-#include "Engine/Core/Logging/Macros.h"
+
+#include "nyxara/core/logging/macros.h"
 
 NYX_DEFINE_LOG_CATEGORY(Core);
 NYX_DEFINE_LOG_CATEGORY(Renderer);

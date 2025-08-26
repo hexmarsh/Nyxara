@@ -1,8 +1,8 @@
-﻿#include "Engine/Core/Logging/Logger.h"
-#include "Engine/Core/Logging/Macros.h"
-#include "Engine/Core/Logging/Categories.h"
-#include <iostream>
+﻿#include <iostream>
 #include <cstdlib>
+#include "nyxara/core/logging/logger.h"
+#include "nyxara/core/logging/macros.h"
+#include "nyxara/core/logging/categories.h"
 
 void *operator new(size_t size)
 {
