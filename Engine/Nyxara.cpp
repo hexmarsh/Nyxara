@@ -26,8 +26,6 @@ void log_test()
 
 int main()
 {
-  Nyxara::Logging::Logger::Init();
-
   NYX_SET_LOG_LEVEL(renderer, Nyxara::Logging::Verbosity::Trace);
   NYX_LOG_ENABLE_CALL_DEPTH();
 

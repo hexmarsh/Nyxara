@@ -3,20 +3,39 @@
 
 namespace Nyxara::Logging
 {
-    std::once_flag InitFlag;
+    class LoggerImpl
+    {
+    public:
+        static LoggerImpl& GetInstance()
+        {
+            static LoggerImpl instance;
+            return instance;
+        }
+
+        std::unordered_map<std::string, Verbosity> CategoryLevels;
+        std::shared_mutex LevelsMutex;
+
+    private:
+        LoggerImpl()
+        {
+            // Initialize spdlog during first access
+            spdlog::set_level(spdlog::level::info);
+            spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v");
+        }
+    };
 
     void Logger::Init()
     {
-        std::call_once(InitFlag, []() {
-            spdlog::set_level(spdlog::level::info);
-            spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v");
-            });
+        // Force initialization of the singleton
+        LoggerImpl::GetInstance();
     }
 
     void Logger::SetCategoryLevel(const Category& category, Verbosity level)
     {
-        std::unique_lock lock(LevelsMutex);
-        CategoryLevels[category.GetName()] = level;
+        auto& impl = LoggerImpl::GetInstance();
+
+        std::unique_lock lock(impl.LevelsMutex);
+        impl.CategoryLevels[category.GetName()] = level;
         
         std::shared_ptr<spdlog::logger> loggerPtr = category.GetLogger();
 
@@ -28,6 +47,8 @@ namespace Nyxara::Logging
 
     std::shared_ptr<spdlog::logger> Logger::GetOrCreateLogger(const std::string& name)
     {
+        auto& impl = LoggerImpl::GetInstance();
+
         std::shared_ptr<spdlog::logger> existingLogger = spdlog::get(name);
 
         if (existingLogger)
@@ -42,13 +63,15 @@ namespace Nyxara::Logging
 
     Verbosity Logger::GetCategoryLevel(const std::string& cat_name)
     {
-        std::shared_lock lock(LevelsMutex);
-        auto it = CategoryLevels.find(cat_name);
-        if (it != CategoryLevels.end())
+        auto& impl = LoggerImpl::GetInstance();
+        
+        std::shared_lock lock(impl.LevelsMutex);
+        auto it = impl.CategoryLevels.find(cat_name);
+        if (it != impl.CategoryLevels.end())
         {
             return it->second;
         }
 
         return Verbosity::Info; // default log level
     }
-} // namespace nyx::logging
+} // namespace Nyxara::Logging

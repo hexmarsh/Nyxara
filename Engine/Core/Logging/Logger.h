@@ -64,11 +64,6 @@ namespace Nyxara::Logging
 
 	private:
 		static Verbosity GetCategoryLevel(const std::string& cat_name);
-
-		inline static std::unordered_map<std::string, Verbosity> CategoryLevels;
-		inline static std::shared_mutex LevelsMutex;
-		inline static bool bIsInitialized = false;
-		inline static std::mutex InitMutex;
 	};
 } // namespace nyx::logging
 
