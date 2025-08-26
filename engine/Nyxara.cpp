@@ -1,8 +1,8 @@
-﻿#include "nyxara/logging/categories.h"
-#include "nyxara/logging/logger.h"
-#include "nyxara/logging/macros.h"
-#include "nyxara/math/vec3.h"
+﻿#include "Engine/Core/Logging/Categories.h"
+#include "Engine/Core/Logging/Logger.h"
+#include "Engine/Core/Logging/Macros.h"
 #include <iostream>
+#include <cstdlib>
 
 void *operator new(size_t size)
 {
@@ -26,16 +26,10 @@ void log_test()
 
 int main()
 {
-  nyxara::logging::logger::init();
+  Nyxara::Logging::Logger::Init();
 
-  NYX_SET_LOG_LEVEL(renderer, nyxara::logging::verbosity::trace);
+  NYX_SET_LOG_LEVEL(renderer, Nyxara::Logging::Verbosity::Trace);
   NYX_LOG_ENABLE_CALL_DEPTH();
-
-  using vec3 = nyxara::math::vec3<glm::vec3>;
-
-  vec3 myvec1(1.0f, 1.0f, 1.0f);
-  vec3 myvec2(1.0f, 1.0f, 1.0f);
-  vec3 summed = myvec1 + myvec2;
 
   log_test();
 }

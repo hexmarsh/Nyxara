@@ -62,7 +62,7 @@ endif()
 # Project Setup
 # --------------------------
 
-project(nyxara
+project(Nyxara
     VERSION 0.1.0
     LANGUAGES CXX
 )
@@ -72,5 +72,4 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 # Add subdirectories
-add_subdirectory(core)
-add_subdirectory(engine)
+add_subdirectory(Engine)
