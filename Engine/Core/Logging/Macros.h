@@ -8,7 +8,7 @@
             ::Nyxara::Logging::Logger::SetCategoryLevel(CAT, LEVEL)
 
 #define NYX_LOG(CAT, LEVEL, ...) \
-            ::Nyxara::Logging::Logger::log(CAT, LEVEL, __VA_ARGS__)
+            ::Nyxara::Logging::Logger::Log(CAT, LEVEL, __VA_ARGS__)
 
 // Convenience macros
 #define NYX_LOG_CRITICAL(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Critical, __VA_ARGS__)

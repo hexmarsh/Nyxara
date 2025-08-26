@@ -12,14 +12,14 @@ namespace Nyxara::Logging
         FunctionTracer(const Category& category, const char* functionName)
             : Category(category), FunctionName(functionName)
         {
-            Logger::log(Category, Verbosity::Trace, "\033[96m=> Entering: {}()\033[0m", FunctionName);
+            Logger::Log(Category, Verbosity::Trace, "\033[96m=> Entering: {}()\033[0m", FunctionName);
             CallDepthManager::Increment();
         }
 
         ~FunctionTracer()
         {
             CallDepthManager::Decrement();
-            Logger::log(Category, Verbosity::Trace, "\033[95m<= Leaving:  {}()\033[0m", FunctionName);
+            Logger::Log(Category, Verbosity::Trace, "\033[95m<= Leaving:  {}()\033[0m", FunctionName);
         }
 
     private:

@@ -20,7 +20,7 @@ namespace Nyxara::Logging
 		static void SetCategoryLevel(const Category& category, Verbosity level);
 
 		template<typename... Args>
-		static void log(const Category& category, Verbosity level, fmt::format_string<Args...> fmtStr, Args&&... args) {
+		static void Log(const Category& category, Verbosity level, fmt::format_string<Args...> fmtStr, Args&&... args) {
 			if (level == Verbosity::None)
 			{
 				return;
