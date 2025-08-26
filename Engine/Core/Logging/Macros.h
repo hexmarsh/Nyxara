@@ -2,7 +2,21 @@
 #include "Engine/Core/Logging/FunctionTracer.h"
 #include "Engine/Core/Logging/Logger.h"
 
-#define NYX_DEFINE_LOG_CATEGORY(Name) static ::Nyxara::Logging::Category Name(#Name)
+#define NYX_DEFINE_LOG_CATEGORY_IMPL(Name) \
+    static const ::Nyxara::Logging::Category& NYX_GET_LOG_CATEGORY_##Name() { \
+        static const ::Nyxara::Logging::Category category(#Name); \
+        return category; \
+    }
+
+#define NYX_DEFINE_LOG_CATEGORY(Name) \
+    NYX_DEFINE_LOG_CATEGORY_IMPL(Name) \
+    static const ::Nyxara::Logging::Category& Name = NYX_GET_LOG_CATEGORY_##Name()
+
+#define NYX_GET_LOG_CATEGORY(Name) NYX_GET_LOG_CATEGORY_##Name()
+
+#define NYX_DECLARE_LOG_CATEGORY(Name) \
+    const ::Nyxara::Logging::Category& NYX_GET_LOG_CATEGORY_##Name(); \
+    static const ::Nyxara::Logging::Category& Name = NYX_GET_LOG_CATEGORY_##Name()
 
 #define NYX_SET_LOG_LEVEL(CAT, LEVEL) \
             ::Nyxara::Logging::Logger::SetCategoryLevel(CAT, LEVEL)

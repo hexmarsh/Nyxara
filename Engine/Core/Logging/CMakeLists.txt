@@ -2,7 +2,6 @@ find_package(spdlog CONFIG REQUIRED)
 
 add_library(NyxaraLogging
 		${CMAKE_CURRENT_SOURCE_DIR}/CallDepthManager.h
-		${CMAKE_CURRENT_SOURCE_DIR}/Categories.h
 		${CMAKE_CURRENT_SOURCE_DIR}/Category.h
 		${CMAKE_CURRENT_SOURCE_DIR}/FunctionTracer.h
 		${CMAKE_CURRENT_SOURCE_DIR}/Logger.h

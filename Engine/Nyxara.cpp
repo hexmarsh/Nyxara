@@ -1,8 +1,9 @@
-﻿#include "Engine/Core/Logging/Categories.h"
-#include "Engine/Core/Logging/Logger.h"
+﻿#include "Engine/Core/Logging/Logger.h"
 #include "Engine/Core/Logging/Macros.h"
 #include <iostream>
 #include <cstdlib>
+
+NYX_DEFINE_LOG_CATEGORY(renderer);
 
 void *operator new(size_t size)
 {
