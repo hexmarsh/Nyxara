@@ -1,0 +1,29 @@
+\doxysection{engine/core/logging/include/nyxara/core/logging/categories.h File Reference}
+\hypertarget{categories_8h}{}\label{categories_8h}\index{engine/core/logging/include/nyxara/core/logging/categories.h@{engine/core/logging/include/nyxara/core/logging/categories.h}}
+
+
+Defines global logging categories for use throughout the Nyxara engine.  
+
+
+{\ttfamily \#include "{}nyxara/core/logging/macros.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{categories_8h_a121ef1cddb958a2dcca989836827c835}\label{categories_8h_a121ef1cddb958a2dcca989836827c835} 
+{\bfseries NYX\+\_\+\+DEFINE\+\_\+\+LOG\+\_\+\+CATEGORY} (Core)
+\begin{DoxyCompactList}\small\item\em Core systems logging category. Used for logs related to engine internals, startup, shutdown, and other central systems. \end{DoxyCompactList}\item 
+\Hypertarget{categories_8h_addcc20289234bd56b136228f0a86b212}\label{categories_8h_addcc20289234bd56b136228f0a86b212} 
+{\bfseries NYX\+\_\+\+DEFINE\+\_\+\+LOG\+\_\+\+CATEGORY} (Renderer)
+\begin{DoxyCompactList}\small\item\em Renderer subsystem logging category. Used for logs from graphics, shaders, and rendering-\/related code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines global logging categories for use throughout the Nyxara engine. 
+
+Logging categories group related log messages and allow independent verbosity control. Each category defined here can be used in any part of the engine via NYX\+\_\+\+LOG macros.
+
+Categories declared here are intended to be used globally.
+
+\begin{DoxyNote}{Note}
+If you want to access these categories in other translation units, use \doxylink{group___logging_macros_ga2043d2e7b7133662e789f67502a944bd}{NYX\+\_\+\+DECLARE\+\_\+\+LOG\+\_\+\+CATEGORY} instead of redefining them. 
+\end{DoxyNote}

@@ -1,0 +1,37 @@
+\doxysection{function\+\_\+tracer.\+h}
+\hypertarget{function__tracer_8h_source}{}\label{function__tracer_8h_source}\index{engine/core/logging/include/nyxara/core/logging/function\_tracer.h@{engine/core/logging/include/nyxara/core/logging/function\_tracer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}nyxara/core/logging/call\_depth\_manager.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}nyxara/core/logging/category.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}nyxara/core/logging/logger.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}nyxara/core/logging/verbosity.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }Nyxara::Logging\ }
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_function_tracer_a73e9b5251a033efedb2b5ec4e068581d}{FunctionTracer}}\ }
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_function_tracer_a73e9b5251a033efedb2b5ec4e068581d}{FunctionTracer}}(\textcolor{keyword}{const}\ Category\&\ category,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ functionName)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Category(category),\ FunctionName(functionName)}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a932324c35a27bb3e413e38709944d82b}{Logger::Log}}(Category,\ Verbosity::Trace,\ \textcolor{stringliteral}{"{}\(\backslash\)033[96m=>\ Entering:\ \{\}()\(\backslash\)033[0m"{}},\ FunctionName);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_call_depth_manager_acdaeb4f1054cef7d89b930aedb6cf74c}{CallDepthManager::Increment}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_function_tracer_ae8cd57bca75c96782e74124783aab4a0}{\string~FunctionTracer}}()}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_call_depth_manager_a000d8a211d9650fdf7932daa62f52691}{CallDepthManager::Decrement}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a932324c35a27bb3e413e38709944d82b}{Logger::Log}}(Category,\ Verbosity::Trace,\ \textcolor{stringliteral}{"{}\(\backslash\)033[95m<=\ Leaving:\ \ \{\}()\(\backslash\)033[0m"{}},\ FunctionName);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category}{Category}}\&\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category}{Category}};\ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ FunctionName;\ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ \}\ \textcolor{comment}{//\ namespace\ nyx::logging}}
+\DoxyCodeLine{00049\ }
+
+\end{DoxyCode}

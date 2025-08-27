@@ -1,0 +1,36 @@
+\doxysection{verbosity.\+h}
+\hypertarget{verbosity_8h_source}{}\label{verbosity_8h_source}\index{engine/core/logging/include/nyxara/core/logging/verbosity.h@{engine/core/logging/include/nyxara/core/logging/verbosity.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <spdlog/spdlog.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }Nyxara::Logging}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Verbosity}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ None\ =\ 0,\ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ Critical,\ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Error,\ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Warn,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Info,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ Debug,\ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Trace\ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{constexpr}\ spdlog::level::level\_enum\ to\_spdlog\_level(Verbosity\ level)\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (level)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Verbosity::Critical:\ \textcolor{keywordflow}{return}\ spdlog::level::critical;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Verbosity::Error:\ \ \ \ \textcolor{keywordflow}{return}\ spdlog::level::err;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Verbosity::Warn:\ \ \ \ \ \textcolor{keywordflow}{return}\ spdlog::level::warn;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Verbosity::Info:\ \ \ \ \ \textcolor{keywordflow}{return}\ spdlog::level::info;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Verbosity::Debug:\ \ \ \ \textcolor{keywordflow}{return}\ spdlog::level::debug;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Verbosity::Trace:\ \ \ \ \textcolor{keywordflow}{return}\ spdlog::level::trace;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ spdlog::level::off;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \}\ \textcolor{comment}{//\ namespace\ nyx::logging}}
+
+\end{DoxyCode}

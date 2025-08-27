@@ -1,0 +1,331 @@
+\doxysection{Nyxara Logging Macros }
+\hypertarget{group___logging_macros}{}\label{group___logging_macros}\index{Nyxara Logging Macros@{Nyxara Logging Macros}}
+
+
+Useful macros for structured logging and function tracing.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___logging_macros_gab79501e387d0d51a19281bf654d569c2}{NYX\+\_\+\+DEFINE\+\_\+\+LOG\+\_\+\+CATEGORY\+\_\+\+IMPL}}(Name)
+\begin{DoxyCompactList}\small\item\em Defines the internal function that returns a static logging category instance. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga07dac83e94f3df4ffb6150bb777d1e8c}{NYX\+\_\+\+DEFINE\+\_\+\+LOG\+\_\+\+CATEGORY}}(Name)
+\begin{DoxyCompactList}\small\item\em Defines a static logging category with the given name. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga6f3e5d737aac0464cf6f51ee4ce554f0}{NYX\+\_\+\+GET\+\_\+\+LOG\+\_\+\+CATEGORY}}(Name)
+\begin{DoxyCompactList}\small\item\em Gets the reference to the logging category function for a given name. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga2043d2e7b7133662e789f67502a944bd}{NYX\+\_\+\+DECLARE\+\_\+\+LOG\+\_\+\+CATEGORY}}(Name)
+\begin{DoxyCompactList}\small\item\em Declares a logging category defined elsewhere. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga39c0f0ae222b2642f7b2cd1a4ca33240}{NYX\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL}}(CAT,  LEVEL)
+\begin{DoxyCompactList}\small\item\em Sets the verbosity level for the specified logging category. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}{NYX\+\_\+\+LOG}}(CAT,  LEVEL, ...)
+\begin{DoxyCompactList}\small\item\em Logs a message at the specified verbosity level under the given category. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga0f518aeeae891bcfd48f11956b4b9977}{NYX\+\_\+\+LOG\+\_\+\+CRITICAL}}(CAT, ...)
+\begin{DoxyCompactList}\small\item\em Logs a critical error message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga529574f3eb210c9ddab759cd8ee8d6c9}{NYX\+\_\+\+LOG\+\_\+\+ERROR}}(CAT, ...)
+\begin{DoxyCompactList}\small\item\em Logs an error message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga1b552697901e7fa7bc454735d2b1bab9}{NYX\+\_\+\+LOG\+\_\+\+WARN}}(CAT, ...)
+\begin{DoxyCompactList}\small\item\em Logs an warning message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga3b3c88cbd45e052e7a3ee7c526fa2bcf}{NYX\+\_\+\+LOG\+\_\+\+INFO}}(CAT, ...)
+\begin{DoxyCompactList}\small\item\em Logs an informational message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga6e858d98f5f644fb8021355f8f66fc1b}{NYX\+\_\+\+LOG\+\_\+\+DEBUG}}(CAT, ...)
+\begin{DoxyCompactList}\small\item\em Logs a debug message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_gaa9d485905753dd13dac89f0406c1e14b}{NYX\+\_\+\+LOG\+\_\+\+TRACE}}(CAT, ...)
+\begin{DoxyCompactList}\small\item\em Logs a trace message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga9a1204cd668d0df4128f45199d8b2cf8}{NYX\+\_\+\+TRACE\+\_\+\+FUNCTION}}(CAT)
+\begin{DoxyCompactList}\small\item\em Logs entry and exit of the current function using Function\+Tracer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga3d2dd99c5aa8345d89421af8bad47172}{NYX\+\_\+\+LOG\+\_\+\+ENABLE\+\_\+\+CALL\+\_\+\+DEPTH}}()
+\begin{DoxyCompactList}\small\item\em Enables call depth-\/based log indentation globally. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___logging_macros_ga141774c42e189a3e366f2bc5c8b1038d}{NYX\+\_\+\+LOG\+\_\+\+DISABLE\+\_\+\+CALL\+\_\+\+DEPTH}}()
+\begin{DoxyCompactList}\small\item\em Disables call depth-\/based log indentation globally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Useful macros for structured logging and function tracing. 
+
+
+
+\label{doc-define-members}
+\Hypertarget{group___logging_macros_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group___logging_macros_ga2043d2e7b7133662e789f67502a944bd}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_DECLARE\_LOG\_CATEGORY@{NYX\_DECLARE\_LOG\_CATEGORY}}
+\index{NYX\_DECLARE\_LOG\_CATEGORY@{NYX\_DECLARE\_LOG\_CATEGORY}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_DECLARE\_LOG\_CATEGORY}{NYX\_DECLARE\_LOG\_CATEGORY}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga2043d2e7b7133662e789f67502a944bd} 
+\#define NYX\+\_\+\+DECLARE\+\_\+\+LOG\+\_\+\+CATEGORY(\begin{DoxyParamCaption}\item[{}]{Name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ const\ ::Nyxara::Logging::Category\&\ NYX\_GET\_LOG\_CATEGORY\_\#\#Name();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ const\ ::Nyxara::Logging::Category\&\ Name\ =\ NYX\_GET\_LOG\_CATEGORY\_\#\#Name()}
+
+\end{DoxyCode}
+
+
+Declares a logging category defined elsewhere. 
+
+This should be places in a header file to acess a category defined in a .cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ In\ header}}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga2043d2e7b7133662e789f67502a944bd}{NYX\_DECLARE\_LOG\_CATEGORY}}(Renderer);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ In\ cpp}}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga07dac83e94f3df4ffb6150bb777d1e8c}{NYX\_DEFINE\_LOG\_CATEGORY}}(Renderer);}
+
+\end{DoxyCode}
+ \Hypertarget{group___logging_macros_ga07dac83e94f3df4ffb6150bb777d1e8c}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_DEFINE\_LOG\_CATEGORY@{NYX\_DEFINE\_LOG\_CATEGORY}}
+\index{NYX\_DEFINE\_LOG\_CATEGORY@{NYX\_DEFINE\_LOG\_CATEGORY}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_DEFINE\_LOG\_CATEGORY}{NYX\_DEFINE\_LOG\_CATEGORY}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga07dac83e94f3df4ffb6150bb777d1e8c} 
+\#define NYX\+\_\+\+DEFINE\+\_\+\+LOG\+\_\+\+CATEGORY(\begin{DoxyParamCaption}\item[{}]{Name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___logging_macros_gab79501e387d0d51a19281bf654d569c2}{NYX\_DEFINE\_LOG\_CATEGORY\_IMPL}}(Name)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ const\ ::Nyxara::Logging::Category\&\ Name\ =\ NYX\_GET\_LOG\_CATEGORY\_\#\#Name()}
+
+\end{DoxyCode}
+
+
+Defines a static logging category with the given name. 
+
+This macros should be used in a .cpp file to define a new logging category.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga07dac83e94f3df4ffb6150bb777d1e8c}{NYX\_DEFINE\_LOG\_CATEGORY}}(Renderer)}
+
+\end{DoxyCode}
+ \Hypertarget{group___logging_macros_gab79501e387d0d51a19281bf654d569c2}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_DEFINE\_LOG\_CATEGORY\_IMPL@{NYX\_DEFINE\_LOG\_CATEGORY\_IMPL}}
+\index{NYX\_DEFINE\_LOG\_CATEGORY\_IMPL@{NYX\_DEFINE\_LOG\_CATEGORY\_IMPL}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_DEFINE\_LOG\_CATEGORY\_IMPL}{NYX\_DEFINE\_LOG\_CATEGORY\_IMPL}}
+{\footnotesize\ttfamily \label{group___logging_macros_gab79501e387d0d51a19281bf654d569c2} 
+\#define NYX\+\_\+\+DEFINE\+\_\+\+LOG\+\_\+\+CATEGORY\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{Name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ const\ ::Nyxara::Logging::Category\&\ NYX\_GET\_LOG\_CATEGORY\_\#\#Name()\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ const\ ::Nyxara::Logging::Category\ category(\#Name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ category;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Defines the internal function that returns a static logging category instance. 
+
+This is intended for internal use. Use NYX\+\_\+\+DEFINE\+\_\+\+LOG\+\_\+\+CATEGORY instead. \Hypertarget{group___logging_macros_ga6f3e5d737aac0464cf6f51ee4ce554f0}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_GET\_LOG\_CATEGORY@{NYX\_GET\_LOG\_CATEGORY}}
+\index{NYX\_GET\_LOG\_CATEGORY@{NYX\_GET\_LOG\_CATEGORY}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_GET\_LOG\_CATEGORY}{NYX\_GET\_LOG\_CATEGORY}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga6f3e5d737aac0464cf6f51ee4ce554f0} 
+\#define NYX\+\_\+\+GET\+\_\+\+LOG\+\_\+\+CATEGORY(\begin{DoxyParamCaption}\item[{}]{Name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{NYX\_GET\_LOG\_CATEGORY\_\#\#Name()}
+
+\end{DoxyCode}
+
+
+Gets the reference to the logging category function for a given name. 
+
+Typically used internally by other macros. \Hypertarget{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG@{NYX\_LOG}}
+\index{NYX\_LOG@{NYX\_LOG}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG}{NYX\_LOG}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465} 
+\#define NYX\+\_\+\+LOG(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{LEVEL}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a932324c35a27bb3e413e38709944d82b}{::Nyxara::Logging::Logger::Log}}(CAT,\ LEVEL,\ \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Logs a message at the specified verbosity level under the given category. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CAT} & the logging category. \\
+\hline
+{\em LEVEL} & Verbosity level (e.\+g., Verbosity\+::\+Warn). \\
+\hline
+{\em ...} & Format string and arguments (fmt-\/style). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group___logging_macros_ga0f518aeeae891bcfd48f11956b4b9977}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_CRITICAL@{NYX\_LOG\_CRITICAL}}
+\index{NYX\_LOG\_CRITICAL@{NYX\_LOG\_CRITICAL}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_CRITICAL}{NYX\_LOG\_CRITICAL}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga0f518aeeae891bcfd48f11956b4b9977} 
+\#define NYX\+\_\+\+LOG\+\_\+\+CRITICAL(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}{NYX\_LOG}}(CAT,\ ::Nyxara::Logging::Verbosity::Critical,\ \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Logs a critical error message. 
+
+\Hypertarget{group___logging_macros_ga6e858d98f5f644fb8021355f8f66fc1b}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_DEBUG@{NYX\_LOG\_DEBUG}}
+\index{NYX\_LOG\_DEBUG@{NYX\_LOG\_DEBUG}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_DEBUG}{NYX\_LOG\_DEBUG}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga6e858d98f5f644fb8021355f8f66fc1b} 
+\#define NYX\+\_\+\+LOG\+\_\+\+DEBUG(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}{NYX\_LOG}}(CAT,\ ::Nyxara::Logging::Verbosity::Debug,\ \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Logs a debug message. 
+
+\Hypertarget{group___logging_macros_ga141774c42e189a3e366f2bc5c8b1038d}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_DISABLE\_CALL\_DEPTH@{NYX\_LOG\_DISABLE\_CALL\_DEPTH}}
+\index{NYX\_LOG\_DISABLE\_CALL\_DEPTH@{NYX\_LOG\_DISABLE\_CALL\_DEPTH}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_DISABLE\_CALL\_DEPTH}{NYX\_LOG\_DISABLE\_CALL\_DEPTH}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga141774c42e189a3e366f2bc5c8b1038d} 
+\#define NYX\+\_\+\+LOG\+\_\+\+DISABLE\+\_\+\+CALL\+\_\+\+DEPTH(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a5d1afe6d9b84674f6aec3adf202b706f}{::Nyxara::Logging::Logger::DisableCallDepth}}()}
+
+\end{DoxyCode}
+
+
+Disables call depth-\/based log indentation globally. 
+
+\Hypertarget{group___logging_macros_ga3d2dd99c5aa8345d89421af8bad47172}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_ENABLE\_CALL\_DEPTH@{NYX\_LOG\_ENABLE\_CALL\_DEPTH}}
+\index{NYX\_LOG\_ENABLE\_CALL\_DEPTH@{NYX\_LOG\_ENABLE\_CALL\_DEPTH}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_ENABLE\_CALL\_DEPTH}{NYX\_LOG\_ENABLE\_CALL\_DEPTH}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga3d2dd99c5aa8345d89421af8bad47172} 
+\#define NYX\+\_\+\+LOG\+\_\+\+ENABLE\+\_\+\+CALL\+\_\+\+DEPTH(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a7843e4b613651b7c6d221d987a97d71f}{::Nyxara::Logging::Logger::EnableCallDepth}}()}
+
+\end{DoxyCode}
+
+
+Enables call depth-\/based log indentation globally. 
+
+\Hypertarget{group___logging_macros_ga529574f3eb210c9ddab759cd8ee8d6c9}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_ERROR@{NYX\_LOG\_ERROR}}
+\index{NYX\_LOG\_ERROR@{NYX\_LOG\_ERROR}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_ERROR}{NYX\_LOG\_ERROR}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga529574f3eb210c9ddab759cd8ee8d6c9} 
+\#define NYX\+\_\+\+LOG\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}{NYX\_LOG}}(CAT,\ ::Nyxara::Logging::Verbosity::Error,\ \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Logs an error message. 
+
+\Hypertarget{group___logging_macros_ga3b3c88cbd45e052e7a3ee7c526fa2bcf}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_INFO@{NYX\_LOG\_INFO}}
+\index{NYX\_LOG\_INFO@{NYX\_LOG\_INFO}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_INFO}{NYX\_LOG\_INFO}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga3b3c88cbd45e052e7a3ee7c526fa2bcf} 
+\#define NYX\+\_\+\+LOG\+\_\+\+INFO(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}{NYX\_LOG}}(CAT,\ ::Nyxara::Logging::Verbosity::Info,\ \ \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Logs an informational message. 
+
+\Hypertarget{group___logging_macros_gaa9d485905753dd13dac89f0406c1e14b}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_TRACE@{NYX\_LOG\_TRACE}}
+\index{NYX\_LOG\_TRACE@{NYX\_LOG\_TRACE}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_TRACE}{NYX\_LOG\_TRACE}}
+{\footnotesize\ttfamily \label{group___logging_macros_gaa9d485905753dd13dac89f0406c1e14b} 
+\#define NYX\+\_\+\+LOG\+\_\+\+TRACE(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}{NYX\_LOG}}(CAT,\ ::Nyxara::Logging::Verbosity::Trace,\ \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Logs a trace message. 
+
+\Hypertarget{group___logging_macros_ga1b552697901e7fa7bc454735d2b1bab9}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_LOG\_WARN@{NYX\_LOG\_WARN}}
+\index{NYX\_LOG\_WARN@{NYX\_LOG\_WARN}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_LOG\_WARN}{NYX\_LOG\_WARN}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga1b552697901e7fa7bc454735d2b1bab9} 
+\#define NYX\+\_\+\+LOG\+\_\+\+WARN(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group___logging_macros_ga8453b5e6bb80413fcf2c2364474d3465}{NYX\_LOG}}(CAT,\ ::Nyxara::Logging::Verbosity::Warn,\ \ \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+Logs an warning message. 
+
+\Hypertarget{group___logging_macros_ga39c0f0ae222b2642f7b2cd1a4ca33240}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_SET\_LOG\_LEVEL@{NYX\_SET\_LOG\_LEVEL}}
+\index{NYX\_SET\_LOG\_LEVEL@{NYX\_SET\_LOG\_LEVEL}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_SET\_LOG\_LEVEL}{NYX\_SET\_LOG\_LEVEL}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga39c0f0ae222b2642f7b2cd1a4ca33240} 
+\#define NYX\+\_\+\+SET\+\_\+\+LOG\+\_\+\+LEVEL(\begin{DoxyParamCaption}\item[{}]{CAT}{, }\item[{}]{LEVEL}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_adb7a8ff59cdcf07495b1c56bbc9527a7}{::Nyxara::Logging::Logger::SetCategoryLevel}}(CAT,\ LEVEL)}
+
+\end{DoxyCode}
+
+
+Sets the verbosity level for the specified logging category. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CAT} & The logging category. \\
+\hline
+{\em LEVEL} & The desired verbosity level (e.\+g., Verbosity\+::\+Info). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group___logging_macros_ga9a1204cd668d0df4128f45199d8b2cf8}\index{Nyxara Logging Macros@{Nyxara Logging Macros}!NYX\_TRACE\_FUNCTION@{NYX\_TRACE\_FUNCTION}}
+\index{NYX\_TRACE\_FUNCTION@{NYX\_TRACE\_FUNCTION}!Nyxara Logging Macros@{Nyxara Logging Macros}}
+\doxysubsubsection{\texorpdfstring{NYX\_TRACE\_FUNCTION}{NYX\_TRACE\_FUNCTION}}
+{\footnotesize\ttfamily \label{group___logging_macros_ga9a1204cd668d0df4128f45199d8b2cf8} 
+\#define NYX\+\_\+\+TRACE\+\_\+\+FUNCTION(\begin{DoxyParamCaption}\item[{}]{CAT}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_function_tracer}{::Nyxara::Logging::FunctionTracer}}\ tracer(CAT,\ \_\_func\_\_)}
+
+\end{DoxyCode}
+
+
+Logs entry and exit of the current function using Function\+Tracer. 
+
+Useful for tracing function calls automatically.
+
+
+\begin{DoxyParams}{Parameters}
+{\em CAT} & The logging category to log under.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ RenderFrame()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \mbox{\hyperlink{group___logging_macros_ga9a1204cd668d0df4128f45199d8b2cf8}{NYX\_TRACE\_FUNCTION}}(Renderer);}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{comment}{//\ Function\ body...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

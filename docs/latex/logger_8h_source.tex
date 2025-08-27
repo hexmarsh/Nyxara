@@ -1,0 +1,79 @@
+\doxysection{logger.\+h}
+\hypertarget{logger_8h_source}{}\label{logger_8h_source}\index{engine/core/logging/include/nyxara/core/logging/logger.h@{engine/core/logging/include/nyxara/core/logging/logger.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <shared\_mutex>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}nyxara/core/logging/call\_depth\_manager.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}nyxara/core/logging/category.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}nyxara/core/logging/verbosity.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ forward\ declarations}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }spdlog\ \{\ \textcolor{keyword}{class\ }logger;\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }Nyxara::Logging}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger}{Logger}}}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a1a30ca88ffda7150e4051213195d207b}{Init}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_adb7a8ff59cdcf07495b1c56bbc9527a7}{SetCategoryLevel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category}{Category}}\&\ category,\ Verbosity\ level);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a932324c35a27bb3e413e38709944d82b}{Log}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category}{Category}}\&\ category,\ Verbosity\ level,\ fmt::format\_string<Args...>\ fmtStr,\ Args\&\&...\ args)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (level\ ==\ Verbosity::None)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ Verbosity\ categoryLevel\ =\ GetCategoryLevel(category.\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category_a69a28f54e10a1edb73e051d7ee7d9b83}{GetName}}());}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (level\ >\ categoryLevel)}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ loggerPtr\ =\ category.\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category_aff578c30157fdd3e2b276dc37ca0590f}{GetLogger}}();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!loggerPtr-\/>should\_log(to\_spdlog\_level(level)))}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_call_depth_manager_a3ed8797cea035238b4609104b656d60b}{CallDepthManager::IsEnabled}}())}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loggerPtr-\/>log(to\_spdlog\_level(level),\ fmtStr,\ std::forward<Args>(args)...);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Avoid\ all\ allocations\ by\ formatting\ spaces\ and\ message\ directly\ into\ buffer}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ spdlog::memory\_buf\_t\ buffer;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ appender\ =\ fmt::appender(buffer);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ fmt::format\_to(appender,\ \textcolor{stringliteral}{"{}\{:\{\}\}"{}},\ \textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_call_depth_manager_ab0e8852b076e035453d7bda7f7c70875}{CallDepthManager::GetIndentationCount}}());}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ fmt::format\_to(appender,\ fmtStr,\ std::forward<Args>(args)...);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ loggerPtr-\/>log(to\_spdlog\_level(level),\ fmt::string\_view(buffer.data(),\ buffer.size()));}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<spdlog::logger>\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a1c88bee2545eef1c96ce5143455ada9c}{GetOrCreateLogger}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a7843e4b613651b7c6d221d987a97d71f}{EnableCallDepth}}()\ \{\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_call_depth_manager_ab09ddf71989ee8a79cc4a8355cf4eb30}{CallDepthManager::SetEnabled}}(\textcolor{keyword}{true});\ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a5d1afe6d9b84674f6aec3adf202b706f}{DisableCallDepth}}()\ \{\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_call_depth_manager_ab09ddf71989ee8a79cc4a8355cf4eb30}{CallDepthManager::SetEnabled}}(\textcolor{keyword}{false});\ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger_a9a5b7dca8cabd819393e13ffa2c64af1}{IsCallDepthEnabled}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_call_depth_manager_a3ed8797cea035238b4609104b656d60b}{CallDepthManager::IsEnabled}}();\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Verbosity\ GetCategoryLevel(\textcolor{keyword}{const}\ std::string\&\ cat\_name);}
+\DoxyCodeLine{00134\ \ \ \ \ \};}
+\DoxyCodeLine{00135\ \}\ \textcolor{comment}{//\ namespace\ nyx::logging}}
+\DoxyCodeLine{00136\ }
+
+\end{DoxyCode}

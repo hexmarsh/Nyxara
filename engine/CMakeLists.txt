@@ -1,14 +1,13 @@
-add_subdirectory(Core)
+add_subdirectory(core)
 
-add_executable(NyxaraEngine Nyxara.cpp)
+add_executable(nyxara nyxara.cpp)
 
-target_include_directories(NyxaraEngine
+target_include_directories(nyxara
     PRIVATE
         ${CMAKE_SOURCE_DIR}
 )
 
-target_link_libraries(NyxaraEngine
+target_link_libraries(nyxara
     PRIVATE
-        NyxaraCore
+        nyxara_core
 )
-

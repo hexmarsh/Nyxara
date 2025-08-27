@@ -7,9 +7,24 @@
 
 namespace Nyxara::Logging 
 {
+    /**
+     * @brief RAII helper class to trace function entry and exit.
+     * 
+     * Logs entering and leaving messages at Verbosity::Trace level, using
+     * call depth to indent nested calls for better readability.
+     * 
+     * Typically instatiated at the start of a function scope to automatically
+     * log an entry and exit.
+     */
     class FunctionTracer 
     {
     public:
+        /**
+         * @brief Constructs a FunctionTrace and logs the function entry.
+         * 
+         * @param category The logging cateogry to use.
+         * @param functionName The name of the function being traced.
+         */
         FunctionTracer(const Category& category, const char* functionName)
             : Category(category), FunctionName(functionName)
         {
@@ -17,6 +32,9 @@ namespace Nyxara::Logging
             CallDepthManager::Increment();
         }
 
+        /**
+         * @brief Destructor that logs the function exit and decreases call depth.
+         */
         ~FunctionTracer()
         {
             CallDepthManager::Decrement();
@@ -24,8 +42,8 @@ namespace Nyxara::Logging
         }
 
     private:
-        const Category& Category;
-        const char* FunctionName;
+        const Category& Category;   ///< Logging category used for messages.
+        const char* FunctionName;   ///< Name of the function being traced.
     };
 } // namespace nyx::logging
 

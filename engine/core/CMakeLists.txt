@@ -1,10 +1,11 @@
-add_subdirectory(Logging)
+add_subdirectory(logging)
+add_subdirectory(math)
 
-add_library(NyxaraCore INTERFACE)
+add_library(nyxara_core INTERFACE)
 
-target_link_libraries(NyxaraCore
+target_link_libraries(nyxara_core
 	INTERFACE
-		NyxaraLogging
-		NyxaraMath
+		nyxara_core_logging
+		nyxara_core_math
 )
 

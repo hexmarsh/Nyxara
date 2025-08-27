@@ -1,8 +1,8 @@
 find_package(glm CONFIG REQUIRED)
 
-add_library(NyxaraMath)
+add_library(nyxara_core_math INTERFACE)
 
-target_link_libraries(NyxaraMath
-	PUBLIC
+target_link_libraries(nyxara_core_math
+	INTERFACE
 		glm::glm
 )

@@ -1,0 +1,32 @@
+\doxysection{category.\+h}
+\hypertarget{category_8h_source}{}\label{category_8h_source}\index{engine/core/logging/include/nyxara/core/logging/category.h@{engine/core/logging/include/nyxara/core/logging/category.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ forward\ declarations}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }spdlog\ \{\ \textcolor{keyword}{class\ }logger;\ \}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }Nyxara::Logging\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger}{Logger}};\ \}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }Nyxara::Logging\ }
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category_a689a3b554356ccc090164fe34f70c168}{Category}}\ }
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category_a689a3b554356ccc090164fe34f70c168}{Category}}(std::string\ name);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category_a69a28f54e10a1edb73e051d7ee7d9b83}{GetName}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ Name;\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ std::shared\_ptr<spdlog::logger>\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_category_aff578c30157fdd3e2b276dc37ca0590f}{GetLogger}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ Logger;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::string\ Name;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::shared\_ptr<spdlog::logger>\ \mbox{\hyperlink{class_nyxara_1_1_logging_1_1_logger}{Logger}};\ }
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ \}\ \textcolor{comment}{//\ namespace\ nyx::logging}}
+\DoxyCodeLine{00049\ }
+
+\end{DoxyCode}
