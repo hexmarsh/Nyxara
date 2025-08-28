@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7efunctiontracer_0',['~FunctionTracer',['../class_nyxara_1_1_logging_1_1_function_tracer.html#ae8cd57bca75c96782e74124783aab4a0',1,'Nyxara::Logging::FunctionTracer']]]
+  ['operator_20new_0',['operator new',['../nyxara_8cpp.html#a160dcabc54bbecfc69484678cafadb81',1,'nyxara.cpp']]]
 ];

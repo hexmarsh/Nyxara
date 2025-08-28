@@ -101,12 +101,10 @@ $(function(){initNavTree('class_nyxara_1_1_logging_1_1_call_depth_manager.html',
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a62ecbebc9e16782f4086e4b07a48b738" id="r_a62ecbebc9e16782f4086e4b07a48b738"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62ecbebc9e16782f4086e4b07a48b738">GetDepth</a> () noexcept</td></tr>
 <tr class="memdesc:a62ecbebc9e16782f4086e4b07a48b738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current call depth.  <br /></td></tr>
-<tr class="memitem:acdaeb4f1054cef7d89b930aedb6cf74c" id="r_acdaeb4f1054cef7d89b930aedb6cf74c"><td class="memItemLeft" align="right" valign="top"><a id="acdaeb4f1054cef7d89b930aedb6cf74c" name="acdaeb4f1054cef7d89b930aedb6cf74c"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Increment</b> () noexcept</td></tr>
-<tr class="memdesc:acdaeb4f1054cef7d89b930aedb6cf74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the current call depth (e.g., on function entry). <br /></td></tr>
-<tr class="memitem:a000d8a211d9650fdf7932daa62f52691" id="r_a000d8a211d9650fdf7932daa62f52691"><td class="memItemLeft" align="right" valign="top"><a id="a000d8a211d9650fdf7932daa62f52691" name="a000d8a211d9650fdf7932daa62f52691"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Decrement</b> () noexcept</td></tr>
-<tr class="memdesc:a000d8a211d9650fdf7932daa62f52691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrements the current call depth (e.g., on function exit). <br /></td></tr>
+<tr class="memitem:acdaeb4f1054cef7d89b930aedb6cf74c" id="r_acdaeb4f1054cef7d89b930aedb6cf74c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdaeb4f1054cef7d89b930aedb6cf74c">Increment</a> () noexcept</td></tr>
+<tr class="memdesc:acdaeb4f1054cef7d89b930aedb6cf74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the current call depth (e.g., on function entry).  <br /></td></tr>
+<tr class="memitem:a000d8a211d9650fdf7932daa62f52691" id="r_a000d8a211d9650fdf7932daa62f52691"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a000d8a211d9650fdf7932daa62f52691">Decrement</a> () noexcept</td></tr>
+<tr class="memdesc:a000d8a211d9650fdf7932daa62f52691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrements the current call depth (e.g., on function exit).  <br /></td></tr>
 <tr class="memitem:ab0e8852b076e035453d7bda7f7c70875" id="r_ab0e8852b076e035453d7bda7f7c70875"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0e8852b076e035453d7bda7f7c70875">GetIndentationCount</a> () noexcept</td></tr>
 <tr class="memdesc:ab0e8852b076e035453d7bda7f7c70875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the indentation width in spaces, based on current depth.  <br /></td></tr>
 <tr class="memitem:ab09ddf71989ee8a79cc4a8355cf4eb30" id="r_ab09ddf71989ee8a79cc4a8355cf4eb30"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab09ddf71989ee8a79cc4a8355cf4eb30">SetEnabled</a> (bool isEnabled) noexcept</td></tr>
@@ -119,6 +117,33 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Decrement</b> 
 <p>Used internally by the logging system to visually indent logs for nested function calls. This helps track call hierarchy in complex systems. Call depth is tracked per-thread.</p>
 <p><a class="el" href="class_nyxara_1_1_logging_1_1_call_depth_manager.html" title="Manages logging indentation based on call depth (per thread).">CallDepthManager</a> is used automatically by the <a class="el" href="class_nyxara_1_1_logging_1_1_function_tracer.html" title="RAII helper class to trace function entry and exit.">FunctionTracer</a> class, but can also be manually enabled or disabled via <a class="el" href="#ab09ddf71989ee8a79cc4a8355cf4eb30" title="Enables or disables call depth indentation tracking.">SetEnabled()</a>. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a000d8a211d9650fdf7932daa62f52691" name="a000d8a211d9650fdf7932daa62f52691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000d8a211d9650fdf7932daa62f52691">&#9670;&#160;</a></span>Decrement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nyxara::Logging::CallDepthManager::Decrement </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decrements the current call depth (e.g., on function exit). </p>
+
+</div>
+</div>
 <a id="a62ecbebc9e16782f4086e4b07a48b738" name="a62ecbebc9e16782f4086e4b07a48b738"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62ecbebc9e16782f4086e4b07a48b738">&#9670;&#160;</a></span>GetDepth()</h2>
 
@@ -173,6 +198,33 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Decrement</b> 
 <p>Returns the indentation width in spaces, based on current depth. </p>
 <p>Each level adds 2 spaces.</p>
 <dl class="section return"><dt>Returns</dt><dd>Number of spaces to indent. </dd></dl>
+
+</div>
+</div>
+<a id="acdaeb4f1054cef7d89b930aedb6cf74c" name="acdaeb4f1054cef7d89b930aedb6cf74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdaeb4f1054cef7d89b930aedb6cf74c">&#9670;&#160;</a></span>Increment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nyxara::Logging::CallDepthManager::Increment </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Increments the current call depth (e.g., on function entry). </p>
 
 </div>
 </div>
@@ -254,7 +306,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>Decrement</b> 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Nyxara</b></li><li class="navelem"><b>Logging</b></li><li class="navelem"><a href="class_nyxara_1_1_logging_1_1_call_depth_manager.html">CallDepthManager</a></li>
+    <li class="navelem"><a href="namespace_nyxara.html">Nyxara</a></li><li class="navelem"><a href="namespace_nyxara_1_1_logging.html">Logging</a></li><li class="navelem"><a href="class_nyxara_1_1_logging_1_1_call_depth_manager.html">CallDepthManager</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

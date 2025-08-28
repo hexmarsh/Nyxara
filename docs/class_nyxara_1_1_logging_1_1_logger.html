@@ -92,7 +92,7 @@ $(function(){initNavTree('class_nyxara_1_1_logging_1_1_logger.html','','class_ny
 </div><!--header-->
 <div class="contents">
 
-<p>Core logging utility for the Nyxara engine.  
+<p>Core logging utility for the <a class="el" href="namespace_nyxara.html">Nyxara</a> engine.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="logger_8h_source.html">logger.h</a>&gt;</code></p>
@@ -101,27 +101,79 @@ $(function(){initNavTree('class_nyxara_1_1_logging_1_1_logger.html','','class_ny
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a30ca88ffda7150e4051213195d207b" id="r_a1a30ca88ffda7150e4051213195d207b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a30ca88ffda7150e4051213195d207b">Init</a> ()</td></tr>
 <tr class="memdesc:a1a30ca88ffda7150e4051213195d207b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the logging system explicitly.  <br /></td></tr>
-<tr class="memitem:adb7a8ff59cdcf07495b1c56bbc9527a7" id="r_adb7a8ff59cdcf07495b1c56bbc9527a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb7a8ff59cdcf07495b1c56bbc9527a7">SetCategoryLevel</a> (const <a class="el" href="class_nyxara_1_1_logging_1_1_category.html">Category</a> &amp;category, Verbosity level)</td></tr>
+<tr class="memitem:adb7a8ff59cdcf07495b1c56bbc9527a7" id="r_adb7a8ff59cdcf07495b1c56bbc9527a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb7a8ff59cdcf07495b1c56bbc9527a7">SetCategoryLevel</a> (const <a class="el" href="class_nyxara_1_1_logging_1_1_category.html">Category</a> &amp;category, <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301">Verbosity</a> level)</td></tr>
 <tr class="memdesc:adb7a8ff59cdcf07495b1c56bbc9527a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the verbosity level for a specific logging category.  <br /></td></tr>
 <tr class="memitem:a932324c35a27bb3e413e38709944d82b" id="r_a932324c35a27bb3e413e38709944d82b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a932324c35a27bb3e413e38709944d82b template"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a932324c35a27bb3e413e38709944d82b">Log</a> (const <a class="el" href="class_nyxara_1_1_logging_1_1_category.html">Category</a> &amp;category, Verbosity level, fmt::format_string&lt; Args... &gt; fmtStr, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a932324c35a27bb3e413e38709944d82b template"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a932324c35a27bb3e413e38709944d82b">Log</a> (const <a class="el" href="class_nyxara_1_1_logging_1_1_category.html">Category</a> &amp;category, <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301">Verbosity</a> level, fmt::format_string&lt; Args... &gt; fmtStr, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a932324c35a27bb3e413e38709944d82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a formatted message under the given category and verbosity.  <br /></td></tr>
 <tr class="memitem:a1c88bee2545eef1c96ce5143455ada9c" id="r_a1c88bee2545eef1c96ce5143455ada9c"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; spdlog::logger &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c88bee2545eef1c96ce5143455ada9c">GetOrCreateLogger</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a1c88bee2545eef1c96ce5143455ada9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an existing logger or creates a new one.  <br /></td></tr>
-<tr class="memitem:a7843e4b613651b7c6d221d987a97d71f" id="r_a7843e4b613651b7c6d221d987a97d71f"><td class="memItemLeft" align="right" valign="top"><a id="a7843e4b613651b7c6d221d987a97d71f" name="a7843e4b613651b7c6d221d987a97d71f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableCallDepth</b> ()</td></tr>
-<tr class="memdesc:a7843e4b613651b7c6d221d987a97d71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables call-depth indentation for logging output. <br /></td></tr>
-<tr class="memitem:a5d1afe6d9b84674f6aec3adf202b706f" id="r_a5d1afe6d9b84674f6aec3adf202b706f"><td class="memItemLeft" align="right" valign="top"><a id="a5d1afe6d9b84674f6aec3adf202b706f" name="a5d1afe6d9b84674f6aec3adf202b706f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableCallDepth</b> ()</td></tr>
-<tr class="memdesc:a5d1afe6d9b84674f6aec3adf202b706f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables call-depth indentation for logging output. <br /></td></tr>
+<tr class="memitem:a7843e4b613651b7c6d221d987a97d71f" id="r_a7843e4b613651b7c6d221d987a97d71f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7843e4b613651b7c6d221d987a97d71f">EnableCallDepth</a> ()</td></tr>
+<tr class="memdesc:a7843e4b613651b7c6d221d987a97d71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables call-depth indentation for logging output.  <br /></td></tr>
+<tr class="memitem:a5d1afe6d9b84674f6aec3adf202b706f" id="r_a5d1afe6d9b84674f6aec3adf202b706f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d1afe6d9b84674f6aec3adf202b706f">DisableCallDepth</a> ()</td></tr>
+<tr class="memdesc:a5d1afe6d9b84674f6aec3adf202b706f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables call-depth indentation for logging output.  <br /></td></tr>
 <tr class="memitem:a9a5b7dca8cabd819393e13ffa2c64af1" id="r_a9a5b7dca8cabd819393e13ffa2c64af1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a5b7dca8cabd819393e13ffa2c64af1">IsCallDepthEnabled</a> ()</td></tr>
 <tr class="memdesc:a9a5b7dca8cabd819393e13ffa2c64af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if call-depth indentation is currently enabled.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Core logging utility for the Nyxara engine. </p>
+<div class="textblock"><p>Core logging utility for the <a class="el" href="namespace_nyxara.html">Nyxara</a> engine. </p>
 <p>Provides a static interface for managing log categories, verbosity levels, and logging messages with optional call-depth indentation.</p>
 <p>The logging system can be explicitly initialized by calling <a class="el" href="#a1a30ca88ffda7150e4051213195d207b" title="Initializes the logging system explicitly.">Init()</a>, but it also supports lazy initialization. Loggers will automatically initalize themselves the first time they are used, even if <a class="el" href="#a1a30ca88ffda7150e4051213195d207b" title="Initializes the logging system explicitly.">Init()</a> is not called manually. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a5d1afe6d9b84674f6aec3adf202b706f" name="a5d1afe6d9b84674f6aec3adf202b706f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1afe6d9b84674f6aec3adf202b706f">&#9670;&#160;</a></span>DisableCallDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nyxara::Logging::Logger::DisableCallDepth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disables call-depth indentation for logging output. </p>
+
+</div>
+</div>
+<a id="a7843e4b613651b7c6d221d987a97d71f" name="a7843e4b613651b7c6d221d987a97d71f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7843e4b613651b7c6d221d987a97d71f">&#9670;&#160;</a></span>EnableCallDepth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nyxara::Logging::Logger::EnableCallDepth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables call-depth indentation for logging output. </p>
+
+</div>
+</div>
 <a id="a1c88bee2545eef1c96ce5143455ada9c" name="a1c88bee2545eef1c96ce5143455ada9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c88bee2545eef1c96ce5143455ada9c">&#9670;&#160;</a></span>GetOrCreateLogger()</h2>
 
@@ -233,7 +285,7 @@ template&lt;typename... Args&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Verbosity</td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301">Verbosity</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -290,7 +342,7 @@ template&lt;typename... Args&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Verbosity</td>          <td class="paramname"><span class="paramname"><em>level</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301">Verbosity</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -313,7 +365,7 @@ template&lt;typename... Args&gt; </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>engine/core/logging/include/nyxara/core/logging/<a class="el" href="logger_8h_source.html">logger.h</a></li>
-<li>engine/core/logging/src/<b>logger.cpp</b></li>
+<li>engine/core/logging/src/<a class="el" href="logger_8cpp.html">logger.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -328,7 +380,7 @@ template&lt;typename... Args&gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Nyxara</b></li><li class="navelem"><b>Logging</b></li><li class="navelem"><a href="class_nyxara_1_1_logging_1_1_logger.html">Logger</a></li>
+    <li class="navelem"><a href="namespace_nyxara.html">Nyxara</a></li><li class="navelem"><a href="namespace_nyxara_1_1_logging.html">Logging</a></li><li class="navelem"><a href="class_nyxara_1_1_logging_1_1_logger.html">Logger</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>
