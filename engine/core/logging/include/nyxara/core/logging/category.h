@@ -21,7 +21,7 @@ namespace Nyxara::Logging
     {
     public:
         /**
-         * @brief Constructs a new loggig category with the given name.
+         * @brief Constructs a new logging category with the given name.
          * 
          * @param name The unique name of the logging category.
          */

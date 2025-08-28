@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Nyxara
+   <div id="projectname">Nyxara<span id="projectnumber">&#160;0.1.0</span>
    </div>
   </td>
  </tr>
@@ -174,7 +174,7 @@ $(function(){initNavTree('logger_8h_source.html','',''); });
 <div class="ttc" id="aclass_nyxara_1_1_logging_1_1_category_html"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_category.html">Nyxara::Logging::Category</a></div><div class="ttdoc">Represents a named logging category within the Nyxara engine.</div><div class="ttdef"><b>Definition</b> category.h:21</div></div>
 <div class="ttc" id="aclass_nyxara_1_1_logging_1_1_category_html_a69a28f54e10a1edb73e051d7ee7d9b83"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_category.html#a69a28f54e10a1edb73e051d7ee7d9b83">Nyxara::Logging::Category::GetName</a></div><div class="ttdeci">const std::string &amp; GetName() const noexcept</div><div class="ttdoc">Gets the name of the logging category.</div><div class="ttdef"><b>Definition</b> category.h:35</div></div>
 <div class="ttc" id="aclass_nyxara_1_1_logging_1_1_category_html_aff578c30157fdd3e2b276dc37ca0590f"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_category.html#aff578c30157fdd3e2b276dc37ca0590f">Nyxara::Logging::Category::GetLogger</a></div><div class="ttdeci">std::shared_ptr&lt; spdlog::logger &gt; GetLogger() const noexcept</div><div class="ttdoc">Gets the spdlog logger associated with this category.</div><div class="ttdef"><b>Definition</b> category.h:42</div></div>
-<div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html">Nyxara::Logging::Logger</a></div><div class="ttdoc">Core loggign utility for the Nyxara engine.</div><div class="ttdef"><b>Definition</b> logger.h:28</div></div>
+<div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html">Nyxara::Logging::Logger</a></div><div class="ttdoc">Core logging utility for the Nyxara engine.</div><div class="ttdef"><b>Definition</b> logger.h:28</div></div>
 <div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html_a1a30ca88ffda7150e4051213195d207b"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html#a1a30ca88ffda7150e4051213195d207b">Nyxara::Logging::Logger::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">Initializes the logging system explicitly.</div><div class="ttdef"><b>Definition</b> logger.cpp:27</div></div>
 <div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html_a1c88bee2545eef1c96ce5143455ada9c"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html#a1c88bee2545eef1c96ce5143455ada9c">Nyxara::Logging::Logger::GetOrCreateLogger</a></div><div class="ttdeci">static std::shared_ptr&lt; spdlog::logger &gt; GetOrCreateLogger(const std::string &amp;name)</div><div class="ttdoc">Retrieves an existing logger or creates a new one.</div><div class="ttdef"><b>Definition</b> logger.cpp:48</div></div>
 <div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html_a5d1afe6d9b84674f6aec3adf202b706f"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html#a5d1afe6d9b84674f6aec3adf202b706f">Nyxara::Logging::Logger::DisableCallDepth</a></div><div class="ttdeci">static void DisableCallDepth()</div><div class="ttdoc">Disables call-depth indentation for logging output.</div><div class="ttdef"><b>Definition</b> logger.h:117</div></div>

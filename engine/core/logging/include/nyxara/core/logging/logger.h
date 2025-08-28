@@ -14,7 +14,7 @@ namespace spdlog { class logger; }
 namespace Nyxara::Logging
 {
 	/**
-	 * @brief Core loggign utility for the Nyxara engine.
+	 * @brief Core logging utility for the Nyxara engine.
 	 *
 	 * Provides a static interface for managing log categories, verbosity levels,
 	 * and logging messages with optional call-depth indentation.

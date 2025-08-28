@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Nyxara
+   <div id="projectname">Nyxara<span id="projectnumber">&#160;0.1.0</span>
    </div>
   </td>
  </tr>
@@ -100,7 +100,7 @@ $(function(){initNavTree('class_nyxara_1_1_logging_1_1_category.html','','class_
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a689a3b554356ccc090164fe34f70c168" id="r_a689a3b554356ccc090164fe34f70c168"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a689a3b554356ccc090164fe34f70c168">Category</a> (std::string name)</td></tr>
-<tr class="memdesc:a689a3b554356ccc090164fe34f70c168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new loggig category with the given name.  <br /></td></tr>
+<tr class="memdesc:a689a3b554356ccc090164fe34f70c168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new logging category with the given name.  <br /></td></tr>
 <tr class="memitem:a69a28f54e10a1edb73e051d7ee7d9b83" id="r_a69a28f54e10a1edb73e051d7ee7d9b83"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69a28f54e10a1edb73e051d7ee7d9b83">GetName</a> () const noexcept</td></tr>
 <tr class="memdesc:a69a28f54e10a1edb73e051d7ee7d9b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the logging category.  <br /></td></tr>
 <tr class="memitem:aff578c30157fdd3e2b276dc37ca0590f" id="r_aff578c30157fdd3e2b276dc37ca0590f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; spdlog::logger &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff578c30157fdd3e2b276dc37ca0590f">GetLogger</a> () const noexcept</td></tr>
@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a named logging category within the Nyxara engine. </p>
 <p>Categories allow grouping logs by subsystem or feature area (e.g., "Renderer, "Physics"). Each category owns it own logger instance, which can be configured independently.</p>
-<p>Used in conjunction with <a class="el" href="class_nyxara_1_1_logging_1_1_logger.html" title="Core loggign utility for the Nyxara engine.">Nyxara::Logging::Logger</a> for structured, per-category logging. </p>
+<p>Used in conjunction with <a class="el" href="class_nyxara_1_1_logging_1_1_logger.html" title="Core logging utility for the Nyxara engine.">Nyxara::Logging::Logger</a> for structured, per-category logging. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a689a3b554356ccc090164fe34f70c168" name="a689a3b554356ccc090164fe34f70c168"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a689a3b554356ccc090164fe34f70c168">&#9670;&#160;</a></span>Category()</h2>
@@ -134,7 +134,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a new loggig category with the given name. </p>
+<p>Constructs a new logging category with the given name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The unique name of the logging category. </td></tr>
