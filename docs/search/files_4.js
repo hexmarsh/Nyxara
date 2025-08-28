@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nyxara_2ecpp_0',['nyxara.cpp',['../nyxara_8cpp.html',1,'']]]
+  ['verbosity_2eh_0',['verbosity.h',['../verbosity_8h.html',1,'']]]
 ];

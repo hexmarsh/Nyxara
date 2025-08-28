@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Nyxara: engine/core/logging/include/nyxara/core/logging/categories.h File Reference</title>
+<title>Nyxara: nyxara/core/logging/categories.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,64 +92,27 @@ $(function(){initNavTree('categories_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Defines global logging categories for use throughout the <a class="el" href="namespace_nyxara.html">Nyxara</a> engine.  
+<p>Defines global logging categories for use throughout the Nyxara engine.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="macros_8h_source.html">nyxara/core/logging/macros.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;nyxara/core/logging/macros.h&quot;</code><br />
 </div>
 <p><a href="categories_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a121ef1cddb958a2dcca989836827c835" id="r_a121ef1cddb958a2dcca989836827c835"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a121ef1cddb958a2dcca989836827c835">NYX_DEFINE_LOG_CATEGORY</a> (Core)</td></tr>
-<tr class="memdesc:a121ef1cddb958a2dcca989836827c835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core systems logging category. Used for logs related to engine internals, startup, shutdown, and other central systems.  <br /></td></tr>
-<tr class="memitem:addcc20289234bd56b136228f0a86b212" id="r_addcc20289234bd56b136228f0a86b212"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addcc20289234bd56b136228f0a86b212">NYX_DEFINE_LOG_CATEGORY</a> (Renderer)</td></tr>
-<tr class="memdesc:addcc20289234bd56b136228f0a86b212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderer subsystem logging category. Used for logs from graphics, shaders, and rendering-related code.  <br /></td></tr>
+<tr class="memitem:a121ef1cddb958a2dcca989836827c835" id="r_a121ef1cddb958a2dcca989836827c835"><td class="memItemLeft" align="right" valign="top"><a id="a121ef1cddb958a2dcca989836827c835" name="a121ef1cddb958a2dcca989836827c835"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>NYX_DEFINE_LOG_CATEGORY</b> (Core)</td></tr>
+<tr class="memdesc:a121ef1cddb958a2dcca989836827c835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core systems logging category. Used for logs related to engine internals, startup, shutdown, and other central systems. <br /></td></tr>
+<tr class="memitem:addcc20289234bd56b136228f0a86b212" id="r_addcc20289234bd56b136228f0a86b212"><td class="memItemLeft" align="right" valign="top"><a id="addcc20289234bd56b136228f0a86b212" name="addcc20289234bd56b136228f0a86b212"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>NYX_DEFINE_LOG_CATEGORY</b> (Renderer)</td></tr>
+<tr class="memdesc:addcc20289234bd56b136228f0a86b212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderer subsystem logging category. Used for logs from graphics, shaders, and rendering-related code. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Defines global logging categories for use throughout the <a class="el" href="namespace_nyxara.html">Nyxara</a> engine. </p>
+<div class="textblock"><p>Defines global logging categories for use throughout the Nyxara engine. </p>
 <p>Logging categories group related log messages and allow independent verbosity control. Each category defined here can be used in any part of the engine via NYX_LOG macros.</p>
 <p>Categories declared here are intended to be used globally.</p>
 <dl class="section note"><dt>Note</dt><dd>If you want to access these categories in other translation units, use <a class="el" href="group___logging_macros.html#ga2043d2e7b7133662e789f67502a944bd">NYX_DECLARE_LOG_CATEGORY</a> instead of redefining them. </dd></dl>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a121ef1cddb958a2dcca989836827c835" name="a121ef1cddb958a2dcca989836827c835"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a121ef1cddb958a2dcca989836827c835">&#9670;&#160;</a></span>NYX_DEFINE_LOG_CATEGORY() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">NYX_DEFINE_LOG_CATEGORY </td>
-          <td>(</td>
-          <td class="paramtype">Core</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Core systems logging category. Used for logs related to engine internals, startup, shutdown, and other central systems. </p>
-
-</div>
-</div>
-<a id="addcc20289234bd56b136228f0a86b212" name="addcc20289234bd56b136228f0a86b212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addcc20289234bd56b136228f0a86b212">&#9670;&#160;</a></span>NYX_DEFINE_LOG_CATEGORY() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">NYX_DEFINE_LOG_CATEGORY </td>
-          <td>(</td>
-          <td class="paramtype">Renderer</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Renderer subsystem logging category. Used for logs from graphics, shaders, and rendering-related code. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -162,7 +125,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_996f45160da62e1a3d7f6046fad68f51.html">engine</a></li><li class="navelem"><a href="dir_a0e47c104ecd6c0b6dccb5f33d071508.html">core</a></li><li class="navelem"><a href="dir_e15b3cf3c71c850229f11394c3244681.html">logging</a></li><li class="navelem"><a href="dir_d3af05e77efa57ecc9cc187fba130185.html">include</a></li><li class="navelem"><a href="dir_895c4acd95c2a2000274f1653976176a.html">nyxara</a></li><li class="navelem"><a href="dir_da7058294a9b0a9bf33c52277e50e4b7.html">core</a></li><li class="navelem"><a href="dir_7c9203644cdac6359701f8b8385f9f0c.html">logging</a></li><li class="navelem"><a href="categories_8h.html">categories.h</a></li>
+    <li class="navelem"><a href="dir_6168fb9cd43be165f847ccd34280df87.html">nyxara</a></li><li class="navelem"><a href="dir_26d6dce631b7db4a1eafeba382b8bab2.html">core</a></li><li class="navelem"><a href="dir_7a537ebf00d93ab03692e3f1ccbb4af4.html">logging</a></li><li class="navelem"><a href="categories_8h.html">categories.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['setcategorylevel_0',['SetCategoryLevel',['../class_nyxara_1_1_logging_1_1_logger.html#adb7a8ff59cdcf07495b1c56bbc9527a7',1,'Nyxara::Logging::Logger']]],
-  ['setenabled_1',['SetEnabled',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#ab09ddf71989ee8a79cc4a8355cf4eb30',1,'Nyxara::Logging::CallDepthManager']]],
-  ['spdlog_2',['spdlog',['../namespacespdlog.html',1,'']]]
+  ['to_5fspdlog_5flevel_0',['to_spdlog_level',['../namespace_nyxara_1_1_logging.html#ac07a538e4763e00ed371608a108dedf2',1,'Nyxara::Logging']]],
+  ['trace_1',['Trace',['../namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1',1,'Nyxara::Logging']]]
 ];

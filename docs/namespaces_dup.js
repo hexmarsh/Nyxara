@@ -1,5 +1,6 @@
 var namespaces_dup =
 [
-    [ "Nyxara", "namespace_nyxara.html", "namespace_nyxara" ],
-    [ "spdlog", "namespacespdlog.html", null ]
+    [ "Nyxara", null, [
+      [ "Logging", "namespace_nyxara_1_1_logging.html", "namespace_nyxara_1_1_logging" ]
+    ] ]
 ];

@@ -1,6 +1,6 @@
-option(NYXARA_BUILD_DOCS "Set to ON to build docs" OFF)
-
 cmake_minimum_required(VERSION 3.11)
+
+option(NYXARA_BUILD_DOCS "Set to ON to build docs" ON)
 
 include(cmake/bootstrap-vcpkg.cmake)
 
@@ -12,13 +12,11 @@ if(POLICY CMP0141)
     )
 endif()
 
-project(Nyxara
-    VERSION 0.1.0
-    LANGUAGES CXX
-)
+project(Nyxara VERSION 0.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
+add_subdirectory(src/nyxara/core/logging)
+add_subdirectory(apps)
 add_subdirectory(docs)
-add_subdirectory(engine)

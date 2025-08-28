@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['categorylevels_0',['CategoryLevels',['../class_nyxara_1_1_logging_1_1_logger_impl.html#ac21c5bb0a29b7767975c33c2aaea4520',1,'Nyxara::Logging::LoggerImpl']]]
+  ['bisenabled_0',['bIsEnabled',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#ae18df2102af84a31471b16103bda1a24',1,'Nyxara::Logging::CallDepthManager']]]
 ];

@@ -1,0 +1,7 @@
+/**
+ * @namespace Nyxara::Logging
+ * @brief Contains logging utilities for the Nyxara engine.
+ *
+ * This namespace provides enums, classes, and functions to handle
+ * logging verbosity, categories, and integration with spdlog.
+ */

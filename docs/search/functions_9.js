@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_20new_0',['operator new',['../nyxara_8cpp.html#a160dcabc54bbecfc69484678cafadb81',1,'nyxara.cpp']]]
+  ['to_5fspdlog_5flevel_0',['to_spdlog_level',['../namespace_nyxara_1_1_logging.html#ac07a538e4763e00ed371608a108dedf2',1,'Nyxara::Logging']]]
 ];

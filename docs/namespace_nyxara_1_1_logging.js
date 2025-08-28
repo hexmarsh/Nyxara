@@ -4,7 +4,6 @@ var namespace_nyxara_1_1_logging =
     [ "Category", "class_nyxara_1_1_logging_1_1_category.html", "class_nyxara_1_1_logging_1_1_category" ],
     [ "FunctionTracer", "class_nyxara_1_1_logging_1_1_function_tracer.html", "class_nyxara_1_1_logging_1_1_function_tracer" ],
     [ "Logger", "class_nyxara_1_1_logging_1_1_logger.html", "class_nyxara_1_1_logging_1_1_logger" ],
-    [ "LoggerImpl", "class_nyxara_1_1_logging_1_1_logger_impl.html", "class_nyxara_1_1_logging_1_1_logger_impl" ],
     [ "Verbosity", "namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301", [
       [ "None", "namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Critical", "namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a278d01e5af56273bae1bb99a98b370cd", null ],
