@@ -100,15 +100,15 @@ $(function(){initNavTree('class_nyxara_1_1_logging_1_1_function_tracer.html','',
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a73e9b5251a033efedb2b5ec4e068581d" id="r_a73e9b5251a033efedb2b5ec4e068581d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73e9b5251a033efedb2b5ec4e068581d">FunctionTracer</a> (const <a class="el" href="class_nyxara_1_1_logging_1_1_category.html">Category</a> &amp;category, const char *functionName)</td></tr>
-<tr class="memdesc:a73e9b5251a033efedb2b5ec4e068581d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a FunctionTrace and logs the function entry.  <br /></td></tr>
+<tr class="memdesc:a73e9b5251a033efedb2b5ec4e068581d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_nyxara_1_1_logging_1_1_function_tracer.html" title="RAII helper class to trace function entry and exit.">FunctionTracer</a> and logs the function entry.  <br /></td></tr>
 <tr class="memitem:ae8cd57bca75c96782e74124783aab4a0" id="r_ae8cd57bca75c96782e74124783aab4a0"><td class="memItemLeft" align="right" valign="top"><a id="ae8cd57bca75c96782e74124783aab4a0" name="ae8cd57bca75c96782e74124783aab4a0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~FunctionTracer</b> ()</td></tr>
 <tr class="memdesc:ae8cd57bca75c96782e74124783aab4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor that logs the function exit and decreases call depth. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>RAII helper class to trace function entry and exit. </p>
-<p>Logs entering and leaving messages at <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1" title="Very detailed interal state (high-frequency)">Verbosity::Trace</a> level, using call depth to indent nested calls for better readability.</p>
-<p>Typically instatiated at the start of a function scope to automatically log an entry and exit. </p>
+<p>Logs entering and leaving messages at <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1" title="Very detailed internal state (high-frequency)">Verbosity::Trace</a> level, using call depth to add depth information to nested calls for better readability.</p>
+<p>Typically instantiated at the start of a function scope to automatically log an entry and exit. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a73e9b5251a033efedb2b5ec4e068581d" name="a73e9b5251a033efedb2b5ec4e068581d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73e9b5251a033efedb2b5ec4e068581d">&#9670;&#160;</a></span>FunctionTracer()</h2>
@@ -137,10 +137,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a FunctionTrace and logs the function entry. </p>
+<p>Constructs a <a class="el" href="class_nyxara_1_1_logging_1_1_function_tracer.html" title="RAII helper class to trace function entry and exit.">FunctionTracer</a> and logs the function entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">category</td><td>The logging cateogry to use. </td></tr>
+    <tr><td class="paramname">category</td><td>The logging category to use. </td></tr>
     <tr><td class="paramname">functionName</td><td>The name of the function being traced. </td></tr>
   </table>
   </dd>

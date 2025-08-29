@@ -17,11 +17,11 @@ namespace Nyxara::Logging
 	 * @brief Core logging utility for the Nyxara engine.
 	 *
 	 * Provides a static interface for managing log categories, verbosity levels,
-	 * and logging messages with optional call-depth indentation.
+	 * and logging messages with optional call-depth metadata.
 	 * 
 	 * The logging system can be explicitly initialized by calling Init(),
 	 * but it also supports lazy initialization. Loggers will automatically
-	 * initalize themselves the first time they are used, even if Init()
+	 * initialize themselves the first time they are used, even if Init()
 	 * is not called manually.
 	 */
 	class Logger
@@ -40,7 +40,7 @@ namespace Nyxara::Logging
 
 		/**
 		 * @brief Sets the verbosity level for a specific logging category.
-
+		 * 
 		 * @param category The logging category.
 		 * @param level The verbosity to assign.
 		 */
@@ -50,13 +50,13 @@ namespace Nyxara::Logging
 		 * @brief Logs a formatted message under the given category and verbosity.
 		 * 
 		 * Automatically checks the category's current verbosity level and skips logging
-		 * if the level is too low. Also applies indentaiton if call depth logging is enabled.
+		 * if the level is too low. Also adds call depth information if call depth logging is enabled.
 		 * 
-		 * @tparam ...Args Variadic template arguments used for formatting.
+		 * @tparam Args Variadic template arguments used for formatting.
 		 * @param category The category under which to log the message.
 		 * @param level The severity/verbosity level of the log.
 		 * @param fmtStr A fmtlib-compatible format string.
-		 * @param ...args Arguments to be formatted into the string.
+		 * @param args Arguments to be formatted into the string.
 		 */
 		template<typename... Args>
 		static void Log(const Category& category, Verbosity level, fmt::format_string<Args...> fmtStr, Args&&... args)
@@ -86,11 +86,11 @@ namespace Nyxara::Logging
 				return;
 			}
 
-			// Avoid all allocations by formatting spaces and message directly into buffer
+			// Format the depth prefix and message directly into buffer
 			spdlog::memory_buf_t buffer;
 
 			auto appender = fmt::appender(buffer);
-			fmt::format_to(appender, "{:{}}", "", CallDepthManager::GetIndentationCount());
+			fmt::format_to(appender, "[depth: {}] ", CallDepthManager::GetDepth());
 			fmt::format_to(appender, fmtStr, std::forward<Args>(args)...);
 
 			loggerPtr->log(to_spdlog_level(level), fmt::string_view(buffer.data(), buffer.size()));
@@ -107,19 +107,19 @@ namespace Nyxara::Logging
 		static std::shared_ptr<spdlog::logger> GetOrCreateLogger(const std::string& name);
 
 		/**
-		 * @brief Enables call-depth indentation for logging output.
+		 * @brief Enables call-depth information for logging output.
 		 */
 		static void EnableCallDepth() { CallDepthManager::SetEnabled(true); }
 
 		/**
-		 * @brief Disables call-depth indentation for logging output.
+		 * @brief Disables call-depth information for logging output.
 		 */
 		static void DisableCallDepth() { CallDepthManager::SetEnabled(false); }
 
 		/**
-		 * @brief Checks if call-depth indentation is currently enabled.
+		 * @brief Checks if call-depth information is currently enabled.
 		 * 
-		 * @return True if call-depth indentation is enabled, false otherwise.
+		 * @return True if call-depth information is enabled, false otherwise.
 		 */
 		static bool IsCallDepthEnabled() { return CallDepthManager::IsEnabled(); }
 
@@ -132,5 +132,5 @@ namespace Nyxara::Logging
 		 */
 		static Verbosity GetCategoryLevel(const std::string& cat_name);
 	};
-} // namespace nyx::logging
+} // namespace Nyxara::Logging
 

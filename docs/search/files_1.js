@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['function_5ftracer_2eh_0',['function_tracer.h',['../function__tracer_8h.html',1,'']]]
+  ['logging_5fexamples_2eh_0',['logging_examples.h',['../logging__examples_8h.html',1,'']]]
 ];

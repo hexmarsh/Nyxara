@@ -98,7 +98,7 @@ $(function(){initNavTree('namespace_nyxara_1_1_logging.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:CallDepthManager" id="r_CallDepthManager"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nyxara_1_1_logging_1_1_call_depth_manager.html">CallDepthManager</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages logging indentation based on call depth (per thread).  <a href="class_nyxara_1_1_logging_1_1_call_depth_manager.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages logging depth based on call depth (per thread).  <a href="class_nyxara_1_1_logging_1_1_call_depth_manager.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Category" id="r_Category"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nyxara_1_1_logging_1_1_category.html">Category</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a named logging category within the Nyxara engine.  <a href="class_nyxara_1_1_logging_1_1_category.html#details">More...</a><br /></td></tr>
 <tr class="memitem:FunctionTracer" id="r_FunctionTracer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nyxara_1_1_logging_1_1_function_tracer.html">FunctionTracer</a></td></tr>
@@ -151,7 +151,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Represents the verbosity level of a log message. </p>
-<p>These levels control which log messages are emitted based on the configured threshold for a given logging cateogry.</p>
+<p>These levels control which log messages are emitted based on the configured threshold for a given logging category.</p>
 <p>If a message's level is lower than the category's verbosity, it is skipped. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aaa79e21b618e988c5cb03df4a58c0301a6adf97f83acf6453d4a6a4b1070f3754" name="aaa79e21b618e988c5cb03df4a58c0301a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p><a class="el" href="namespace_nyxara_1_1_logging.html" title="Contains logging utilities for the Nyxara engine.">Logging</a> disabled. </p>
@@ -166,7 +166,7 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aaa79e21b618e988c5cb03df4a58c0301aa603905470e2a5b8c13e96b579ef0dba" name="aaa79e21b618e988c5cb03df4a58c0301aa603905470e2a5b8c13e96b579ef0dba"></a>Debug&#160;</td><td class="fielddoc"><p>Debug-level information for development. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1" name="aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1"></a>Trace&#160;</td><td class="fielddoc"><p>Very detailed interal state (high-frequency) </p>
+<tr><td class="fieldname"><a id="aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1" name="aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1"></a>Trace&#160;</td><td class="fielddoc"><p>Very detailed internal state (high-frequency) </p>
 </td></tr>
 </table>
 

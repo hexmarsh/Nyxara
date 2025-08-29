@@ -10,57 +10,18 @@
  */
 
 /**
- * @def NYX_DEFINE_LOG_CATEGORY_IMPL(Name)
- * @brief Defines the internal function that returns a static logging category instance.
- * 
- * This is intended for internal use. Use NYX_DEFINE_LOG_CATEGORY instead.
- */
-#define NYX_DEFINE_LOG_CATEGORY_IMPL(Name) \
-    static const ::Nyxara::Logging::Category& NYX_GET_LOG_CATEGORY_##Name() { \
-        static const ::Nyxara::Logging::Category category(#Name); \
-        return category; \
-    }
-
-/**
  * @def NYX_DEFINE_LOG_CATEGORY(Name)
  * @brief Defines a static logging category with the given name.
  * 
- * This macros should be used in a .cpp file to define a new logging category.
+ * This macro creates a static instance of a logging category that can be used
+ * throughout the application. The category is initialized once per translation unit.
  * 
  * @code
  * NYX_DEFINE_LOG_CATEGORY(Renderer)
  * @endcode
  */
 #define NYX_DEFINE_LOG_CATEGORY(Name) \
-    NYX_DEFINE_LOG_CATEGORY_IMPL(Name) \
-    static const ::Nyxara::Logging::Category& Name = NYX_GET_LOG_CATEGORY_##Name()
-
-/**
- * @def NYX_GET_LOG_CATEGORY(Name)
- * @brief Gets the reference to the logging category function for a given name.
- * 
- * Typically used internally by other macros.
- */
-#define NYX_GET_LOG_CATEGORY(Name) NYX_GET_LOG_CATEGORY_##Name()
-
-
-/**
- * @def NYX_DECLARE_LOG_CATEGORY(Name)
- * @brief Declares a logging category defined elsewhere.
- * 
- * This should be places in a header file to acess a category defined in a .cpp.
- * 
- * @code
- * // In header
- * NYX_DECLARE_LOG_CATEGORY(Renderer);
- * 
- * // In cpp
- * NYX_DEFINE_LOG_CATEGORY(Renderer);
- * @endcode
- */
-#define NYX_DECLARE_LOG_CATEGORY(Name) \
-    const ::Nyxara::Logging::Category& NYX_GET_LOG_CATEGORY_##Name(); \
-    static const ::Nyxara::Logging::Category& Name = NYX_GET_LOG_CATEGORY_##Name()
+    inline const ::Nyxara::Logging::Category Name(#Name)
 
 /**
  * @def NYX_SET_LOG_LEVEL(CAT, LEVEL)
@@ -76,7 +37,7 @@
  * @def NYX_LOG(CAT, LEVEL, ...)
  * @brief Logs a message at the specified verbosity level under the given category.
  * 
- * @param CAT the logging category.
+ * @param CAT The logging category.
  * @param LEVEL Verbosity level (e.g., Verbosity::Warn).
  * @param ... Format string and arguments (fmt-style).
  */
@@ -99,7 +60,7 @@
 #define NYX_LOG_ERROR(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Error, __VA_ARGS__)
 
 /**
- * @brief Logs an warning message.
+ * @brief Logs a warning message.
  */
 #define NYX_LOG_WARN(CAT, ...)  NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Warn,  __VA_ARGS__)
 
@@ -141,12 +102,12 @@
 // ----------------------------------------------------------------------------
 
 /**
- * @brief Enables call depth-based log indentation globally.
+ * @brief Enables call depth-based log information globally.
  */
 #define NYX_LOG_ENABLE_CALL_DEPTH() ::Nyxara::Logging::Logger::EnableCallDepth()
 
 /**
- * @brief Disables call depth-based log indentation globally.
+ * @brief Disables call depth-based log information globally.
  */
 #define NYX_LOG_DISABLE_CALL_DEPTH() ::Nyxara::Logging::Logger::DisableCallDepth()
 

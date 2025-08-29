@@ -3,9 +3,9 @@
 namespace Nyxara::Logging
 {
 	/**
-	 * @brief Manages logging indentation based on call depth (per thread).
+	 * @brief Manages logging depth based on call depth (per thread).
 	 * 
-	 * Used internally by the logging system to visually indent logs for nested function calls.
+	 * Used internally by the logging system to add call depth information to logs for nested function calls.
 	 * This helps track call hierarchy in complex systems. Call depth is tracked per-thread.
 	 * 
 	 * CallDepthManager is used automatically by the FunctionTracer class, but can also be manually
@@ -32,25 +32,16 @@ namespace Nyxara::Logging
 		static void Decrement() noexcept { --CallDepth; }
 
 		/**
-		 * @brief Returns the indentation width in spaces, based on current depth.
+		 * @brief Enables or disables call depth information tracking.
 		 * 
-		 * Each level adds 2 spaces.
-		 * 
-		 * @return Number of spaces to indent.
-		 */
-		static int GetIndentationCount() noexcept { return CallDepth * 2; }
-
-		/**
-		 * @brief Enables or disables call depth indentation tracking.
-		 * 
-		 * When disabled, logs will be emitted without indentation, regardless of depth.
+		 * When disabled, logs will be emitted without call depth information, regardless of depth.
 		 * 
 		 * @param isEnabled True to enable, false to disable.
 		 */
 		static void SetEnabled(bool isEnabled) noexcept { bIsEnabled = isEnabled; }
 
 		/**
-		 * @brief Checks whether the call depth indentation is enabled.
+		 * @brief Checks whether the call depth information is enabled.
 		 * 
 		 * @return True if enabled, false otherwise.
 		 */
@@ -63,4 +54,4 @@ namespace Nyxara::Logging
 
 	inline thread_local int CallDepthManager::CallDepth = 0;
 	inline thread_local bool CallDepthManager::bIsEnabled = false;
-} // namespace nyx::logging
+} // namespace Nyxara::Logging

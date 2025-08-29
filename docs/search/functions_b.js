@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['to_5fspdlog_5flevel_0',['to_spdlog_level',['../namespace_nyxara_1_1_logging.html#ac07a538e4763e00ed371608a108dedf2',1,'Nyxara::Logging']]]
+  ['nyx_5fdefine_5flog_5fcategory_0',['NYX_DEFINE_LOG_CATEGORY',['../categories_8h.html#a121ef1cddb958a2dcca989836827c835',1,'NYX_DEFINE_LOG_CATEGORY(Core):&#160;categories.h'],['../categories_8h.html#addcc20289234bd56b136228f0a86b212',1,'NYX_DEFINE_LOG_CATEGORY(Renderer):&#160;categories.h']]]
 ];

@@ -110,17 +110,17 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:af9f69d4e17ece9582da1f28adee539ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an existing logger or creates a new one.  <br /></td></tr>
 <tr class="memitem:a7843e4b613651b7c6d221d987a97d71f" id="r_a7843e4b613651b7c6d221d987a97d71f"><td class="memItemLeft" align="right" valign="top"><a id="a7843e4b613651b7c6d221d987a97d71f" name="a7843e4b613651b7c6d221d987a97d71f"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>EnableCallDepth</b> ()</td></tr>
-<tr class="memdesc:a7843e4b613651b7c6d221d987a97d71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables call-depth indentation for logging output. <br /></td></tr>
+<tr class="memdesc:a7843e4b613651b7c6d221d987a97d71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables call-depth information for logging output. <br /></td></tr>
 <tr class="memitem:a5d1afe6d9b84674f6aec3adf202b706f" id="r_a5d1afe6d9b84674f6aec3adf202b706f"><td class="memItemLeft" align="right" valign="top"><a id="a5d1afe6d9b84674f6aec3adf202b706f" name="a5d1afe6d9b84674f6aec3adf202b706f"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableCallDepth</b> ()</td></tr>
-<tr class="memdesc:a5d1afe6d9b84674f6aec3adf202b706f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables call-depth indentation for logging output. <br /></td></tr>
+<tr class="memdesc:a5d1afe6d9b84674f6aec3adf202b706f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables call-depth information for logging output. <br /></td></tr>
 <tr class="memitem:a9a5b7dca8cabd819393e13ffa2c64af1" id="r_a9a5b7dca8cabd819393e13ffa2c64af1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a5b7dca8cabd819393e13ffa2c64af1">IsCallDepthEnabled</a> ()</td></tr>
-<tr class="memdesc:a9a5b7dca8cabd819393e13ffa2c64af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if call-depth indentation is currently enabled.  <br /></td></tr>
+<tr class="memdesc:a9a5b7dca8cabd819393e13ffa2c64af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if call-depth information is currently enabled.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Core logging utility for the Nyxara engine. </p>
-<p>Provides a static interface for managing log categories, verbosity levels, and logging messages with optional call-depth indentation.</p>
-<p>The logging system can be explicitly initialized by calling <a class="el" href="#a9a9bc547ba019f1803f81869a3ad2277" title="Initializes the logging system explicitly.">Init()</a>, but it also supports lazy initialization. Loggers will automatically initalize themselves the first time they are used, even if <a class="el" href="#a9a9bc547ba019f1803f81869a3ad2277" title="Initializes the logging system explicitly.">Init()</a> is not called manually. </p>
+<p>Provides a static interface for managing log categories, verbosity levels, and logging messages with optional call-depth metadata.</p>
+<p>The logging system can be explicitly initialized by calling <a class="el" href="#a9a9bc547ba019f1803f81869a3ad2277" title="Initializes the logging system explicitly.">Init()</a>, but it also supports lazy initialization. Loggers will automatically initialize themselves the first time they are used, even if <a class="el" href="#a9a9bc547ba019f1803f81869a3ad2277" title="Initializes the logging system explicitly.">Init()</a> is not called manually. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="af9f69d4e17ece9582da1f28adee539ac" name="af9f69d4e17ece9582da1f28adee539ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9f69d4e17ece9582da1f28adee539ac">&#9670;&#160;</a></span>GetOrCreateLogger()</h2>
@@ -209,8 +209,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>DisableCallDep
 </table>
 </div><div class="memdoc">
 
-<p>Checks if call-depth indentation is currently enabled. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if call-depth indentation is enabled, false otherwise. </dd></dl>
+<p>Checks if call-depth information is currently enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if call-depth information is enabled, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -254,10 +254,10 @@ template&lt;typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Logs a formatted message under the given category and verbosity. </p>
-<p>Automatically checks the category's current verbosity level and skips logging if the level is too low. Also applies indentaiton if call depth logging is enabled.</p>
+<p>Automatically checks the category's current verbosity level and skips logging if the level is too low. Also adds call depth information if call depth logging is enabled.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">...Args</td><td>Variadic template arguments used for formatting. </td></tr>
+    <tr><td class="paramname">Args</td><td>Variadic template arguments used for formatting. </td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +266,7 @@ template&lt;typename... Args&gt; </div>
     <tr><td class="paramname">category</td><td>The category under which to log the message. </td></tr>
     <tr><td class="paramname">level</td><td>The severity/verbosity level of the log. </td></tr>
     <tr><td class="paramname">fmtStr</td><td>A fmtlib-compatible format string. </td></tr>
-    <tr><td class="paramname">...args</td><td>Arguments to be formatted into the string. </td></tr>
+    <tr><td class="paramname">args</td><td>Arguments to be formatted into the string. </td></tr>
   </table>
   </dd>
 </dl>

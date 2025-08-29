@@ -12,8 +12,8 @@ namespace Nyxara::Logging
     /**
      * @brief Represents a named logging category within the Nyxara engine.
      * 
-     * Categories allow grouping logs by subsystem or feature area (e.g., "Renderer, "Physics").
-     * Each category owns it own logger instance, which can be configured independently.
+     * Categories allow grouping logs by subsystem or feature area (e.g., "Renderer", "Physics").
+     * Each category owns its own logger instance, which can be configured independently.
      * 
      * Used in conjunction with Nyxara::Logging::Logger for structured, per-category logging.
      */
@@ -45,5 +45,5 @@ namespace Nyxara::Logging
         std::string Name;                       ///< Name of the logging category.
         std::shared_ptr<spdlog::logger> Logger; ///< Logger instance associated with this category.
     };
-} // namespace nyx::logging
+} // namespace Nyxara::Logging
 

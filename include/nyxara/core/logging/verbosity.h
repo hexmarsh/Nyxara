@@ -8,7 +8,7 @@ namespace Nyxara::Logging
 	 * @brief Represents the verbosity level of a log message.
 	 * 
 	 * These levels control which log messages are emitted based on the 
-	 * configured threshold for a given logging cateogry.
+	 * configured threshold for a given logging category.
 	 * 
 	 * If a message's level is lower than the category's verbosity, it is skipped.
 	 */
@@ -20,7 +20,7 @@ namespace Nyxara::Logging
 		Warn,		///< Warnings that might require attention
 		Info,		///< General information about application flow
 		Debug,		///< Debug-level information for development
-		Trace		///< Very detailed interal state (high-frequency)
+		Trace		///< Very detailed internal state (high-frequency)
 	};
 
 	/**
@@ -43,4 +43,4 @@ namespace Nyxara::Logging
 		default:				  return spdlog::level::off;
 		}
 	}
-} // namespace nyx::logging
+} // namespace Nyxara::Logging

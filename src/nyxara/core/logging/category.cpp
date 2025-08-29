@@ -9,4 +9,4 @@ namespace Nyxara::Logging
         // Cache logger pointer on construction to avoid repeated lookups
         Logger = Logger::GetOrCreateLogger(Name);
     }
-} // namespace nyx::logging
+} // namespace Nyxara::Logging
