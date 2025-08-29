@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warn_0',['Warn',['../namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a56525ae64d370c0b448ac0d60710ef17',1,'Nyxara::Logging']]]
+  ['trace_0',['Trace',['../namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04add4ec0ac4e58f7c32a01244ae91150b1',1,'nyxara::logging']]]
 ];

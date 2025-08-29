@@ -2,7 +2,7 @@
 
 #include <spdlog/spdlog.h>
 
-namespace Nyxara::Logging
+namespace nyxara::logging
 {
 	/**
 	 * @brief Represents the verbosity level of a log message.
@@ -43,4 +43,4 @@ namespace Nyxara::Logging
 		default:				  return spdlog::level::off;
 		}
 	}
-} // namespace Nyxara::Logging
+} // namespace nyxara::logging

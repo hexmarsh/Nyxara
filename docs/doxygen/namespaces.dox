@@ -1,7 +1,22 @@
 /**
- * @namespace Nyxara::Logging
+ * @namespace nyxara::logging
  * @brief Contains logging utilities for the Nyxara engine.
  *
  * This namespace provides enums, classes, and functions to handle
  * logging verbosity, categories, and integration with spdlog.
+ */
+
+ /**
+ * @namespace nyxara::platform
+ * @brief Provides platform abstraction interfaces for Nyxara.
+ *
+ * The `nyxara::platform` namespace contains platform-independent interfaces
+ * and data structures used for interacting with operating system services such as
+ * window management, input handling, and system-level functionality.
+ *
+ * Currently, it defines the window interface (`Window`) and configuration structures
+ * (`WindowCreateInfo`) for creating and managing application windows using
+ * backend-agnostic implementations like GLFW.
+ *
+ * This namespace acts as a foundation for the engine's cross-platform capabilities.
  */

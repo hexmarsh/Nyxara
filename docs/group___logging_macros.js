@@ -1,5 +1,6 @@
 var group___logging_macros =
 [
+    [ "NYX_DECLARE_LOG_CATEGORY", "group___logging_macros.html#ga2043d2e7b7133662e789f67502a944bd", null ],
     [ "NYX_DEFINE_LOG_CATEGORY", "group___logging_macros.html#ga07dac83e94f3df4ffb6150bb777d1e8c", null ],
     [ "NYX_LOG", "group___logging_macros.html#ga8453b5e6bb80413fcf2c2364474d3465", null ],
     [ "NYX_LOG_CRITICAL", "group___logging_macros.html#ga0f518aeeae891bcfd48f11956b4b9977", null ],

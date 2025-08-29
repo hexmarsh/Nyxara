@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verbosity_0',['Verbosity',['../namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301',1,'Nyxara::Logging']]]
+  ['verbosity_0',['Verbosity',['../namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04',1,'nyxara::logging']]]
 ];

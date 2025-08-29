@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['increment_0',['Increment',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#acdaeb4f1054cef7d89b930aedb6cf74c',1,'Nyxara::Logging::CallDepthManager']]],
-  ['init_1',['Init',['../class_nyxara_1_1_logging_1_1_logger.html#a9a9bc547ba019f1803f81869a3ad2277',1,'Nyxara::Logging::Logger']]],
-  ['iscalldepthenabled_2',['IsCallDepthEnabled',['../class_nyxara_1_1_logging_1_1_logger.html#a9a5b7dca8cabd819393e13ffa2c64af1',1,'Nyxara::Logging::Logger']]],
-  ['isenabled_3',['IsEnabled',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#a3ed8797cea035238b4609104b656d60b',1,'Nyxara::Logging::CallDepthManager']]]
+  ['increment_0',['Increment',['../classnyxara_1_1logging_1_1_call_depth_manager.html#a06212b304dce61ff0c675a229176230a',1,'nyxara::logging::CallDepthManager']]],
+  ['init_1',['Init',['../classnyxara_1_1logging_1_1_logger.html#a25902d6aae24e671133a2590e78670b4',1,'nyxara::logging::Logger']]],
+  ['iscalldepthenabled_2',['IsCallDepthEnabled',['../classnyxara_1_1logging_1_1_logger.html#a35ddcdeec487b09bbaf11aff4c33bec4',1,'nyxara::logging::Logger']]],
+  ['isenabled_3',['IsEnabled',['../classnyxara_1_1logging_1_1_call_depth_manager.html#a93693059e9978bf811b84513dfba9d2c',1,'nyxara::logging::CallDepthManager']]]
 ];

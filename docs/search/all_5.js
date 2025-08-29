@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['increment_0',['Increment',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#acdaeb4f1054cef7d89b930aedb6cf74c',1,'Nyxara::Logging::CallDepthManager']]],
-  ['info_1',['Info',['../namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a4059b0251f66a18cb56f544728796875',1,'Nyxara::Logging']]],
-  ['init_2',['Init',['../class_nyxara_1_1_logging_1_1_logger.html#a9a9bc547ba019f1803f81869a3ad2277',1,'Nyxara::Logging::Logger']]],
-  ['iscalldepthenabled_3',['IsCallDepthEnabled',['../class_nyxara_1_1_logging_1_1_logger.html#a9a5b7dca8cabd819393e13ffa2c64af1',1,'Nyxara::Logging::Logger']]],
-  ['isenabled_4',['IsEnabled',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#a3ed8797cea035238b4609104b656d60b',1,'Nyxara::Logging::CallDepthManager']]]
+  ['getdepth_0',['GetDepth',['../classnyxara_1_1logging_1_1_call_depth_manager.html#a7eef67f12ef4996b9926c0c5794db5b4',1,'nyxara::logging::CallDepthManager']]],
+  ['getlogger_1',['GetLogger',['../classnyxara_1_1logging_1_1_category.html#ac3a21a8f07aec00e54e203c15d553662',1,'nyxara::logging::Category']]],
+  ['getname_2',['GetName',['../classnyxara_1_1logging_1_1_category.html#a51c44c40ad369f7f24e50ef9c6752ba0',1,'nyxara::logging::Category']]],
+  ['getorcreatelogger_3',['GetOrCreateLogger',['../classnyxara_1_1logging_1_1_logger.html#a62f2ea49bd9ce550f481ff29b853d72b',1,'nyxara::logging::Logger']]],
+  ['glfw_4',['GLFW',['../namespacenyxara_1_1platform.html#a65291688cd4ae7a457decd0853ce15a5ab274032f1807b8cd2f7553d82555c73c',1,'nyxara::platform']]]
 ];

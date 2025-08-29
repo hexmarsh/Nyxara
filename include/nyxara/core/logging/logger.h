@@ -11,7 +11,7 @@
 // forward declarations
 namespace spdlog { class logger; }
 
-namespace Nyxara::Logging
+namespace nyxara::logging
 {
 	/**
 	 * @brief Core logging utility for the Nyxara engine.
@@ -132,5 +132,5 @@ namespace Nyxara::Logging
 		 */
 		static Verbosity GetCategoryLevel(const std::string& cat_name);
 	};
-} // namespace Nyxara::Logging
+} // namespace nyxara::logging
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_0',['Logger',['../class_nyxara_1_1_logging_1_1_category.html#a77e16841c5731001165759a8e595687a',1,'Nyxara::Logging::Category']]]
+  ['resizable_0',['Resizable',['../structnyxara_1_1platform_1_1_window_create_info.html#ad9c3b9466da0a5461b6608c4dfe37123',1,'nyxara::platform::WindowCreateInfo']]]
 ];

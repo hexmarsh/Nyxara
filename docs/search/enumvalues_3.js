@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['info_0',['Info',['../namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a4059b0251f66a18cb56f544728796875',1,'Nyxara::Logging']]]
+  ['glfw_0',['GLFW',['../namespacenyxara_1_1platform.html#a65291688cd4ae7a457decd0853ce15a5ab274032f1807b8cd2f7553d82555c73c',1,'nyxara::platform']]]
 ];

@@ -1,7 +1,7 @@
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include "nyxara/core/logging/logger.h"
 
-namespace Nyxara::Logging
+namespace nyxara::logging
 {
     class LoggerImpl
     {
@@ -20,7 +20,7 @@ namespace Nyxara::Logging
         {
             // Initialize spdlog during first access
             spdlog::set_level(spdlog::level::info);
-            spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^%L%$] [thread %t] %v");
+            spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^%L%$] %v");
         }
     };
 
@@ -74,4 +74,4 @@ namespace Nyxara::Logging
 
         return Verbosity::Info; // default log level
     }
-} // namespace Nyxara::Logging
+} // namespace nyxara::logging

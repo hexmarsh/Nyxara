@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7efunctiontracer_0',['~FunctionTracer',['../class_nyxara_1_1_logging_1_1_function_tracer.html#ae8cd57bca75c96782e74124783aab4a0',1,'Nyxara::Logging::FunctionTracer']]]
+  ['to_5fspdlog_5flevel_0',['to_spdlog_level',['../namespacenyxara_1_1logging.html#a4e7a0ff8ec8d8c848ce24ca7996ab9e9',1,'nyxara::logging']]]
 ];

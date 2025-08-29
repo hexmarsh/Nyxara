@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['to_5fspdlog_5flevel_0',['to_spdlog_level',['../namespace_nyxara_1_1_logging.html#ac07a538e4763e00ed371608a108dedf2',1,'Nyxara::Logging']]],
-  ['trace_1',['Trace',['../namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1',1,'Nyxara::Logging']]]
+  ['warn_0',['Warn',['../namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a56525ae64d370c0b448ac0d60710ef17',1,'nyxara::logging']]],
+  ['width_1',['Width',['../structnyxara_1_1platform_1_1_window_create_info.html#a913b7711cfd16c4d7892997daac75536',1,'nyxara::platform::WindowCreateInfo']]],
+  ['window_2',['Window',['../classnyxara_1_1platform_1_1_window.html',1,'nyxara::platform']]],
+  ['window_2eh_3',['window.h',['../window_8h.html',1,'']]],
+  ['windowbackend_4',['WindowBackend',['../namespacenyxara_1_1platform.html#a65291688cd4ae7a457decd0853ce15a5',1,'nyxara::platform']]],
+  ['windowcreateinfo_5',['WindowCreateInfo',['../structnyxara_1_1platform_1_1_window_create_info.html',1,'nyxara::platform']]]
 ];

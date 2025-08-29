@@ -97,8 +97,10 @@ $(function(){initNavTree('group___logging_macros.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:ga2043d2e7b7133662e789f67502a944bd" id="r_ga2043d2e7b7133662e789f67502a944bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2043d2e7b7133662e789f67502a944bd">NYX_DECLARE_LOG_CATEGORY</a>(Name)</td></tr>
+<tr class="memdesc:ga2043d2e7b7133662e789f67502a944bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a logging category defined elsewhere.  <br /></td></tr>
 <tr class="memitem:ga07dac83e94f3df4ffb6150bb777d1e8c" id="r_ga07dac83e94f3df4ffb6150bb777d1e8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga07dac83e94f3df4ffb6150bb777d1e8c">NYX_DEFINE_LOG_CATEGORY</a>(Name)</td></tr>
-<tr class="memdesc:ga07dac83e94f3df4ffb6150bb777d1e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a static logging category with the given name.  <br /></td></tr>
+<tr class="memdesc:ga07dac83e94f3df4ffb6150bb777d1e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a logging category with the given name.  <br /></td></tr>
 <tr class="memitem:ga39c0f0ae222b2642f7b2cd1a4ca33240" id="r_ga39c0f0ae222b2642f7b2cd1a4ca33240"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga39c0f0ae222b2642f7b2cd1a4ca33240">NYX_SET_LOG_LEVEL</a>(CAT,  LEVEL)</td></tr>
 <tr class="memdesc:ga39c0f0ae222b2642f7b2cd1a4ca33240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the verbosity level for the specified logging category.  <br /></td></tr>
 <tr class="memitem:ga8453b5e6bb80413fcf2c2364474d3465" id="r_ga8453b5e6bb80413fcf2c2364474d3465"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT,  LEVEL, ...)</td></tr>
@@ -117,6 +119,8 @@ Macros</h2></td></tr>
 <tr class="memdesc:gaa9d485905753dd13dac89f0406c1e14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a trace message.  <br /></td></tr>
 <tr class="memitem:ga9a1204cd668d0df4128f45199d8b2cf8" id="r_ga9a1204cd668d0df4128f45199d8b2cf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9a1204cd668d0df4128f45199d8b2cf8">NYX_TRACE_FUNCTION</a>(CAT)</td></tr>
 <tr class="memdesc:ga9a1204cd668d0df4128f45199d8b2cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs entry and exit of the current function using FunctionTracer.  <br /></td></tr>
+<tr class="memitem:ga851cb98e3244a5a55a4714a8e724c325" id="r_ga851cb98e3244a5a55a4714a8e724c325"><td class="memItemLeft" align="right" valign="top"><a id="ga851cb98e3244a5a55a4714a8e724c325" name="ga851cb98e3244a5a55a4714a8e724c325"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NYX_FUNCTION_NAME</b>&#160;&#160;&#160;__func__</td></tr>
 <tr class="memitem:ga3d2dd99c5aa8345d89421af8bad47172" id="r_ga3d2dd99c5aa8345d89421af8bad47172"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3d2dd99c5aa8345d89421af8bad47172">NYX_LOG_ENABLE_CALL_DEPTH</a>()</td></tr>
 <tr class="memdesc:ga3d2dd99c5aa8345d89421af8bad47172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables call depth-based log information globally.  <br /></td></tr>
 <tr class="memitem:ga141774c42e189a3e366f2bc5c8b1038d" id="r_ga141774c42e189a3e366f2bc5c8b1038d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga141774c42e189a3e366f2bc5c8b1038d">NYX_LOG_DISABLE_CALL_DEPTH</a>()</td></tr>
@@ -125,6 +129,29 @@ Macros</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Useful macros for structured logging and function tracing. </p>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="ga2043d2e7b7133662e789f67502a944bd" name="ga2043d2e7b7133662e789f67502a944bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2043d2e7b7133662e789f67502a944bd">&#9670;&#160;</a></span>NYX_DECLARE_LOG_CATEGORY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NYX_DECLARE_LOG_CATEGORY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>Name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">extern</span> const ::nyxara::logging::Category Name</div>
+</div><!-- fragment -->
+<p>Declares a logging category defined elsewhere. </p>
+<p>This macro should be used in header files to declare a logging category that is defined in a source file using NYX_DEFINE_LOG_CATEGORY.</p>
+<div class="fragment"><div class="line"><a class="code hl_define" href="#ga2043d2e7b7133662e789f67502a944bd">NYX_DECLARE_LOG_CATEGORY</a>(Renderer);</div>
+<div class="ttc" id="agroup___logging_macros_html_ga2043d2e7b7133662e789f67502a944bd"><div class="ttname"><a href="#ga2043d2e7b7133662e789f67502a944bd">NYX_DECLARE_LOG_CATEGORY</a></div><div class="ttdeci">#define NYX_DECLARE_LOG_CATEGORY(Name)</div><div class="ttdoc">Declares a logging category defined elsewhere.</div><div class="ttdef"><b>Definition</b> macros.h:23</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="ga07dac83e94f3df4ffb6150bb777d1e8c" name="ga07dac83e94f3df4ffb6150bb777d1e8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga07dac83e94f3df4ffb6150bb777d1e8c">&#9670;&#160;</a></span>NYX_DEFINE_LOG_CATEGORY</h2>
 
@@ -139,12 +166,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">inline</span> const ::Nyxara::Logging::Category Name(#Name)</div>
+<b>Value:</b><div class="fragment"><div class="line">    const ::nyxara::logging::Category Name(#Name)</div>
 </div><!-- fragment -->
-<p>Defines a static logging category with the given name. </p>
-<p>This macro creates a static instance of a logging category that can be used throughout the application. The category is initialized once per translation unit.</p>
+<p>Defines a logging category with the given name. </p>
+<p>This macro creates a const instance of a logging category that can be used throughout the application. The category is initialized once per translation unit.</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="#ga07dac83e94f3df4ffb6150bb777d1e8c">NYX_DEFINE_LOG_CATEGORY</a>(Renderer)</div>
-<div class="ttc" id="agroup___logging_macros_html_ga07dac83e94f3df4ffb6150bb777d1e8c"><div class="ttname"><a href="#ga07dac83e94f3df4ffb6150bb777d1e8c">NYX_DEFINE_LOG_CATEGORY</a></div><div class="ttdeci">#define NYX_DEFINE_LOG_CATEGORY(Name)</div><div class="ttdoc">Defines a static logging category with the given name.</div><div class="ttdef"><b>Definition</b> macros.h:23</div></div>
+<div class="ttc" id="agroup___logging_macros_html_ga07dac83e94f3df4ffb6150bb777d1e8c"><div class="ttname"><a href="#ga07dac83e94f3df4ffb6150bb777d1e8c">NYX_DEFINE_LOG_CATEGORY</a></div><div class="ttdeci">#define NYX_DEFINE_LOG_CATEGORY(Name)</div><div class="ttdoc">Defines a logging category with the given name.</div><div class="ttdef"><b>Definition</b> macros.h:37</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -171,8 +198,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">            <a class="code hl_function" href="class_nyxara_1_1_logging_1_1_logger.html#a932324c35a27bb3e413e38709944d82b">::Nyxara::Logging::Logger::Log</a>(CAT, LEVEL, __VA_ARGS__)</div>
-<div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html_a932324c35a27bb3e413e38709944d82b"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html#a932324c35a27bb3e413e38709944d82b">Nyxara::Logging::Logger::Log</a></div><div class="ttdeci">static void Log(const Category &amp;category, Verbosity level, fmt::format_string&lt; Args... &gt; fmtStr, Args &amp;&amp;... args)</div><div class="ttdoc">Logs a formatted message under the given category and verbosity.</div><div class="ttdef"><b>Definition</b> logger.h:62</div></div>
+<b>Value:</b><div class="fragment"><div class="line">            <a class="code hl_function" href="classnyxara_1_1logging_1_1_logger.html#a439f5b97be76f8eb4edeca917cf575bb">::nyxara::logging::Logger::Log</a>(CAT, LEVEL, __VA_ARGS__)</div>
+<div class="ttc" id="aclassnyxara_1_1logging_1_1_logger_html_a439f5b97be76f8eb4edeca917cf575bb"><div class="ttname"><a href="classnyxara_1_1logging_1_1_logger.html#a439f5b97be76f8eb4edeca917cf575bb">nyxara::logging::Logger::Log</a></div><div class="ttdeci">static void Log(const Category &amp;category, Verbosity level, fmt::format_string&lt; Args... &gt; fmtStr, Args &amp;&amp;... args)</div><div class="ttdoc">Logs a formatted message under the given category and verbosity.</div><div class="ttdef"><b>Definition</b> logger.h:62</div></div>
 </div><!-- fragment -->
 <p>Logs a message at the specified verbosity level under the given category. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -204,9 +231,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a278d01e5af56273bae1bb99a98b370cd">::Nyxara::Logging::Verbosity::Critical</a>, __VA_ARGS__)</div>
-<div class="ttc" id="agroup___logging_macros_html_ga8453b5e6bb80413fcf2c2364474d3465"><div class="ttname"><a href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a></div><div class="ttdeci">#define NYX_LOG(CAT, LEVEL,...)</div><div class="ttdoc">Logs a message at the specified verbosity level under the given category.</div><div class="ttdef"><b>Definition</b> macros.h:44</div></div>
-<div class="ttc" id="anamespace_nyxara_1_1_logging_html_aaa79e21b618e988c5cb03df4a58c0301a278d01e5af56273bae1bb99a98b370cd"><div class="ttname"><a href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a278d01e5af56273bae1bb99a98b370cd">Nyxara::Logging::Verbosity::Critical</a></div><div class="ttdeci">@ Critical</div><div class="ttdoc">Critical failures (non-recoverable)</div><div class="ttdef"><b>Definition</b> verbosity.h:18</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a278d01e5af56273bae1bb99a98b370cd">::nyxara::logging::Verbosity::Critical</a>, __VA_ARGS__)</div>
+<div class="ttc" id="agroup___logging_macros_html_ga8453b5e6bb80413fcf2c2364474d3465"><div class="ttname"><a href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a></div><div class="ttdeci">#define NYX_LOG(CAT, LEVEL,...)</div><div class="ttdoc">Logs a message at the specified verbosity level under the given category.</div><div class="ttdef"><b>Definition</b> macros.h:58</div></div>
+<div class="ttc" id="anamespacenyxara_1_1logging_html_a35a61f47cb146845771dc962a49f4a04a278d01e5af56273bae1bb99a98b370cd"><div class="ttname"><a href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a278d01e5af56273bae1bb99a98b370cd">nyxara::logging::Verbosity::Critical</a></div><div class="ttdeci">@ Critical</div><div class="ttdoc">Critical failures (non-recoverable)</div><div class="ttdef"><b>Definition</b> verbosity.h:18</div></div>
 </div><!-- fragment -->
 <p>Logs a critical error message. </p>
 
@@ -230,8 +257,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301aa603905470e2a5b8c13e96b579ef0dba">::Nyxara::Logging::Verbosity::Debug</a>, __VA_ARGS__)</div>
-<div class="ttc" id="anamespace_nyxara_1_1_logging_html_aaa79e21b618e988c5cb03df4a58c0301aa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301aa603905470e2a5b8c13e96b579ef0dba">Nyxara::Logging::Verbosity::Debug</a></div><div class="ttdeci">@ Debug</div><div class="ttdoc">Debug-level information for development.</div><div class="ttdef"><b>Definition</b> verbosity.h:22</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04aa603905470e2a5b8c13e96b579ef0dba">::nyxara::logging::Verbosity::Debug</a>, __VA_ARGS__)</div>
+<div class="ttc" id="anamespacenyxara_1_1logging_html_a35a61f47cb146845771dc962a49f4a04aa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04aa603905470e2a5b8c13e96b579ef0dba">nyxara::logging::Verbosity::Debug</a></div><div class="ttdeci">@ Debug</div><div class="ttdoc">Debug-level information for development.</div><div class="ttdef"><b>Definition</b> verbosity.h:22</div></div>
 </div><!-- fragment -->
 <p>Logs a debug message. </p>
 
@@ -251,8 +278,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_nyxara_1_1_logging_1_1_logger.html#a5d1afe6d9b84674f6aec3adf202b706f">::Nyxara::Logging::Logger::DisableCallDepth</a>()</div>
-<div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html_a5d1afe6d9b84674f6aec3adf202b706f"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html#a5d1afe6d9b84674f6aec3adf202b706f">Nyxara::Logging::Logger::DisableCallDepth</a></div><div class="ttdeci">static void DisableCallDepth()</div><div class="ttdoc">Disables call-depth information for logging output.</div><div class="ttdef"><b>Definition</b> logger.h:117</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="classnyxara_1_1logging_1_1_logger.html#a37bda9396f13386c969bd224a1827b9c">::nyxara::logging::Logger::DisableCallDepth</a>()</div>
+<div class="ttc" id="aclassnyxara_1_1logging_1_1_logger_html_a37bda9396f13386c969bd224a1827b9c"><div class="ttname"><a href="classnyxara_1_1logging_1_1_logger.html#a37bda9396f13386c969bd224a1827b9c">nyxara::logging::Logger::DisableCallDepth</a></div><div class="ttdeci">static void DisableCallDepth()</div><div class="ttdoc">Disables call-depth information for logging output.</div><div class="ttdef"><b>Definition</b> logger.h:117</div></div>
 </div><!-- fragment -->
 <p>Disables call depth-based log information globally. </p>
 
@@ -272,8 +299,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="class_nyxara_1_1_logging_1_1_logger.html#a7843e4b613651b7c6d221d987a97d71f">::Nyxara::Logging::Logger::EnableCallDepth</a>()</div>
-<div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html_a7843e4b613651b7c6d221d987a97d71f"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html#a7843e4b613651b7c6d221d987a97d71f">Nyxara::Logging::Logger::EnableCallDepth</a></div><div class="ttdeci">static void EnableCallDepth()</div><div class="ttdoc">Enables call-depth information for logging output.</div><div class="ttdef"><b>Definition</b> logger.h:112</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="classnyxara_1_1logging_1_1_logger.html#a8e082e14a0168b7f80d34f72ebc3dcd7">::nyxara::logging::Logger::EnableCallDepth</a>()</div>
+<div class="ttc" id="aclassnyxara_1_1logging_1_1_logger_html_a8e082e14a0168b7f80d34f72ebc3dcd7"><div class="ttname"><a href="classnyxara_1_1logging_1_1_logger.html#a8e082e14a0168b7f80d34f72ebc3dcd7">nyxara::logging::Logger::EnableCallDepth</a></div><div class="ttdeci">static void EnableCallDepth()</div><div class="ttdoc">Enables call-depth information for logging output.</div><div class="ttdef"><b>Definition</b> logger.h:112</div></div>
 </div><!-- fragment -->
 <p>Enables call depth-based log information globally. </p>
 
@@ -297,8 +324,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a902b0d55fddef6f8d651fe1035b7d4bd">::Nyxara::Logging::Verbosity::Error</a>, __VA_ARGS__)</div>
-<div class="ttc" id="anamespace_nyxara_1_1_logging_html_aaa79e21b618e988c5cb03df4a58c0301a902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a902b0d55fddef6f8d651fe1035b7d4bd">Nyxara::Logging::Verbosity::Error</a></div><div class="ttdeci">@ Error</div><div class="ttdoc">Recoverable errors.</div><div class="ttdef"><b>Definition</b> verbosity.h:19</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a902b0d55fddef6f8d651fe1035b7d4bd">::nyxara::logging::Verbosity::Error</a>, __VA_ARGS__)</div>
+<div class="ttc" id="anamespacenyxara_1_1logging_html_a35a61f47cb146845771dc962a49f4a04a902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a902b0d55fddef6f8d651fe1035b7d4bd">nyxara::logging::Verbosity::Error</a></div><div class="ttdeci">@ Error</div><div class="ttdoc">Recoverable errors.</div><div class="ttdef"><b>Definition</b> verbosity.h:19</div></div>
 </div><!-- fragment -->
 <p>Logs an error message. </p>
 
@@ -322,8 +349,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a4059b0251f66a18cb56f544728796875">::Nyxara::Logging::Verbosity::Info</a>,  __VA_ARGS__)</div>
-<div class="ttc" id="anamespace_nyxara_1_1_logging_html_aaa79e21b618e988c5cb03df4a58c0301a4059b0251f66a18cb56f544728796875"><div class="ttname"><a href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a4059b0251f66a18cb56f544728796875">Nyxara::Logging::Verbosity::Info</a></div><div class="ttdeci">@ Info</div><div class="ttdoc">General information about application flow.</div><div class="ttdef"><b>Definition</b> verbosity.h:21</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a4059b0251f66a18cb56f544728796875">::nyxara::logging::Verbosity::Info</a>,  __VA_ARGS__)</div>
+<div class="ttc" id="anamespacenyxara_1_1logging_html_a35a61f47cb146845771dc962a49f4a04a4059b0251f66a18cb56f544728796875"><div class="ttname"><a href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a4059b0251f66a18cb56f544728796875">nyxara::logging::Verbosity::Info</a></div><div class="ttdeci">@ Info</div><div class="ttdoc">General information about application flow.</div><div class="ttdef"><b>Definition</b> verbosity.h:21</div></div>
 </div><!-- fragment -->
 <p>Logs an informational message. </p>
 
@@ -347,8 +374,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1">::Nyxara::Logging::Verbosity::Trace</a>, __VA_ARGS__)</div>
-<div class="ttc" id="anamespace_nyxara_1_1_logging_html_aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1"><div class="ttname"><a href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1">Nyxara::Logging::Verbosity::Trace</a></div><div class="ttdeci">@ Trace</div><div class="ttdoc">Very detailed internal state (high-frequency)</div><div class="ttdef"><b>Definition</b> verbosity.h:23</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04add4ec0ac4e58f7c32a01244ae91150b1">::nyxara::logging::Verbosity::Trace</a>, __VA_ARGS__)</div>
+<div class="ttc" id="anamespacenyxara_1_1logging_html_a35a61f47cb146845771dc962a49f4a04add4ec0ac4e58f7c32a01244ae91150b1"><div class="ttname"><a href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04add4ec0ac4e58f7c32a01244ae91150b1">nyxara::logging::Verbosity::Trace</a></div><div class="ttdeci">@ Trace</div><div class="ttdoc">Very detailed internal state (high-frequency)</div><div class="ttdef"><b>Definition</b> verbosity.h:23</div></div>
 </div><!-- fragment -->
 <p>Logs a trace message. </p>
 
@@ -372,8 +399,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a56525ae64d370c0b448ac0d60710ef17">::Nyxara::Logging::Verbosity::Warn</a>,  __VA_ARGS__)</div>
-<div class="ttc" id="anamespace_nyxara_1_1_logging_html_aaa79e21b618e988c5cb03df4a58c0301a56525ae64d370c0b448ac0d60710ef17"><div class="ttname"><a href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a56525ae64d370c0b448ac0d60710ef17">Nyxara::Logging::Verbosity::Warn</a></div><div class="ttdeci">@ Warn</div><div class="ttdoc">Warnings that might require attention.</div><div class="ttdef"><b>Definition</b> verbosity.h:20</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT, <a class="code hl_enumvalue" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a56525ae64d370c0b448ac0d60710ef17">::nyxara::logging::Verbosity::Warn</a>,  __VA_ARGS__)</div>
+<div class="ttc" id="anamespacenyxara_1_1logging_html_a35a61f47cb146845771dc962a49f4a04a56525ae64d370c0b448ac0d60710ef17"><div class="ttname"><a href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a56525ae64d370c0b448ac0d60710ef17">nyxara::logging::Verbosity::Warn</a></div><div class="ttdeci">@ Warn</div><div class="ttdoc">Warnings that might require attention.</div><div class="ttdef"><b>Definition</b> verbosity.h:20</div></div>
 </div><!-- fragment -->
 <p>Logs a warning message. </p>
 
@@ -397,8 +424,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">            <a class="code hl_function" href="class_nyxara_1_1_logging_1_1_logger.html#a761d995fe0db7da811239792546d3198">::Nyxara::Logging::Logger::SetCategoryLevel</a>(CAT, LEVEL)</div>
-<div class="ttc" id="aclass_nyxara_1_1_logging_1_1_logger_html_a761d995fe0db7da811239792546d3198"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_logger.html#a761d995fe0db7da811239792546d3198">Nyxara::Logging::Logger::SetCategoryLevel</a></div><div class="ttdeci">static void SetCategoryLevel(const Category &amp;category, Verbosity level)</div><div class="ttdoc">Sets the verbosity level for a specific logging category.</div></div>
+<b>Value:</b><div class="fragment"><div class="line">            <a class="code hl_function" href="classnyxara_1_1logging_1_1_logger.html#a40400fdd54c8433ffba8003da2678975">::nyxara::logging::Logger::SetCategoryLevel</a>(CAT, LEVEL)</div>
+<div class="ttc" id="aclassnyxara_1_1logging_1_1_logger_html_a40400fdd54c8433ffba8003da2678975"><div class="ttname"><a href="classnyxara_1_1logging_1_1_logger.html#a40400fdd54c8433ffba8003da2678975">nyxara::logging::Logger::SetCategoryLevel</a></div><div class="ttdeci">static void SetCategoryLevel(const Category &amp;category, Verbosity level)</div><div class="ttdoc">Sets the verbosity level for a specific logging category.</div></div>
 </div><!-- fragment -->
 <p>Sets the verbosity level for the specified logging category. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -425,8 +452,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_class" href="class_nyxara_1_1_logging_1_1_function_tracer.html">::Nyxara::Logging::FunctionTracer</a> tracer(CAT, __func__)</div>
-<div class="ttc" id="aclass_nyxara_1_1_logging_1_1_function_tracer_html"><div class="ttname"><a href="class_nyxara_1_1_logging_1_1_function_tracer.html">Nyxara::Logging::FunctionTracer</a></div><div class="ttdoc">RAII helper class to trace function entry and exit.</div><div class="ttdef"><b>Definition</b> function_tracer.h:20</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_class" href="classnyxara_1_1logging_1_1_function_tracer.html">::nyxara::logging::FunctionTracer</a> tracer(CAT, NYX_FUNCTION_NAME)</div>
+<div class="ttc" id="aclassnyxara_1_1logging_1_1_function_tracer_html"><div class="ttname"><a href="classnyxara_1_1logging_1_1_function_tracer.html">nyxara::logging::FunctionTracer</a></div><div class="ttdoc">RAII helper class to trace function entry and exit.</div><div class="ttdef"><b>Definition</b> function_tracer.h:20</div></div>
 </div><!-- fragment -->
 <p>Logs entry and exit of the current function using FunctionTracer. </p>
 <p>Useful for tracing function calls automatically.</p>
@@ -441,7 +468,7 @@ Macros</h2></td></tr>
 <div class="line">     <a class="code hl_define" href="#ga9a1204cd668d0df4128f45199d8b2cf8">NYX_TRACE_FUNCTION</a>(Renderer);</div>
 <div class="line">     <span class="comment">// Function body...</span></div>
 <div class="line">}</div>
-<div class="ttc" id="agroup___logging_macros_html_ga9a1204cd668d0df4128f45199d8b2cf8"><div class="ttname"><a href="#ga9a1204cd668d0df4128f45199d8b2cf8">NYX_TRACE_FUNCTION</a></div><div class="ttdeci">#define NYX_TRACE_FUNCTION(CAT)</div><div class="ttdoc">Logs entry and exit of the current function using FunctionTracer.</div><div class="ttdef"><b>Definition</b> macros.h:98</div></div>
+<div class="ttc" id="agroup___logging_macros_html_ga9a1204cd668d0df4128f45199d8b2cf8"><div class="ttname"><a href="#ga9a1204cd668d0df4128f45199d8b2cf8">NYX_TRACE_FUNCTION</a></div><div class="ttdeci">#define NYX_TRACE_FUNCTION(CAT)</div><div class="ttdoc">Logs entry and exit of the current function using FunctionTracer.</div><div class="ttdef"><b>Definition</b> macros.h:120</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

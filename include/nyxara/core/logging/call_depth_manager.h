@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Nyxara::Logging
+namespace nyxara::logging
 {
 	/**
 	 * @brief Manages logging depth based on call depth (per thread).
@@ -54,4 +54,4 @@ namespace Nyxara::Logging
 
 	inline thread_local int CallDepthManager::CallDepth = 0;
 	inline thread_local bool CallDepthManager::bIsEnabled = false;
-} // namespace Nyxara::Logging
+} // namespace nyxara::logging

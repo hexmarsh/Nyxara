@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['enablecalldepth_0',['EnableCallDepth',['../class_nyxara_1_1_logging_1_1_logger.html#a7843e4b613651b7c6d221d987a97d71f',1,'Nyxara::Logging::Logger']]],
-  ['error_1',['Error',['../namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a902b0d55fddef6f8d651fe1035b7d4bd',1,'Nyxara::Logging']]]
+  ['debug_0',['Debug',['../namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04aa603905470e2a5b8c13e96b579ef0dba',1,'nyxara::logging']]],
+  ['decrement_1',['Decrement',['../classnyxara_1_1logging_1_1_call_depth_manager.html#a7f77e5f3b4e60151a60b5839ee57faf9',1,'nyxara::logging::CallDepthManager']]],
+  ['disablecalldepth_2',['DisableCallDepth',['../classnyxara_1_1logging_1_1_logger.html#a37bda9396f13386c969bd224a1827b9c',1,'nyxara::logging::Logger']]]
 ];

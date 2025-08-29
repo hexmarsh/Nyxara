@@ -4,23 +4,26 @@
 
 /**
  * @file categories.h
- * @brief Defines global logging categories for use throughout the Nyxara engine.
+ * @brief Defines global logging categories used throughout the Nyxara engine.
  *
  * Logging categories group related log messages and allow independent verbosity control.
- * Each category defined here can be used in any part of the engine via NYX_LOG macros.
+ * Each category declared here can be used anywhere in the engine via NYX_LOG macros.
  *
- * Categories defined here are intended to be used globally.
+ * Categories declared here are intended for global/shared use across subsystems.
  */
 
-/**
+ /**
  * @brief Core systems logging category.
- * Used for logs related to engine internals, startup, shutdown, and other central systems.
+ *
+ * Used for logs related to engine internals, startup, shutdown, configuration,
+ * and other central/core systems.
  */
-NYX_DEFINE_LOG_CATEGORY(Core);
+NYX_DECLARE_LOG_CATEGORY(Core);
 
 /**
- * @brief Renderer subsystem logging category.
- * Used for logs from graphics, shaders, and rendering-related code.
- */
-NYX_DEFINE_LOG_CATEGORY(Renderer);
-
+* @brief Platform abstraction logging category.
+*
+* Covers platform-specific functionality such as window management,
+* input handling, and OS integration.
+*/
+NYX_DECLARE_LOG_CATEGORY(Platform);

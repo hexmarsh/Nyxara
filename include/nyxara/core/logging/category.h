@@ -5,9 +5,9 @@
 
 // forward declarations
 namespace spdlog { class logger; }
-namespace Nyxara::Logging { class Logger; }
+namespace nyxara::logging { class Logger; }
 
-namespace Nyxara::Logging 
+namespace nyxara::logging
 {
     /**
      * @brief Represents a named logging category within the Nyxara engine.
@@ -22,10 +22,23 @@ namespace Nyxara::Logging
     public:
         /**
          * @brief Constructs a new logging category with the given name.
-         * 
+         *
+         * This constructor initializes the category by copying the provided name,
+         * then caches the associated logger pointer to avoid repeated lookups.
+         *
          * @param name The unique name of the logging category.
          */
-        explicit Category(std::string name);
+        explicit Category(const std::string& name);
+
+        /**
+         * @brief Constructs a new logging category by moving the given name.
+         *
+         * This constructor initializes the category by moving the provided name,
+         * then caches the associated logger pointer to avoid repeated lookups.
+         *
+         * @param name The unique name of the logging category (moved).
+         */
+        explicit Category(std::string&& name);
 
         /**
          * @brief Gets the name of the logging category.
@@ -45,5 +58,5 @@ namespace Nyxara::Logging
         std::string Name;                       ///< Name of the logging category.
         std::shared_ptr<spdlog::logger> Logger; ///< Logger instance associated with this category.
     };
-} // namespace Nyxara::Logging
+} // namespace nyxara::logging
 

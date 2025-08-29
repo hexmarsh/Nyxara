@@ -10,10 +10,24 @@
  */
 
 /**
- * @def NYX_DEFINE_LOG_CATEGORY(Name)
- * @brief Defines a static logging category with the given name.
+ * @def NYX_DECLARE_LOG_CATEGORY(Name)
+ * @brief Declares a logging category defined elsewhere.
  * 
- * This macro creates a static instance of a logging category that can be used
+ * This macro should be used in header files to declare a logging category
+ * that is defined in a source file using NYX_DEFINE_LOG_CATEGORY.
+ * 
+ * @code
+ * NYX_DECLARE_LOG_CATEGORY(Renderer);
+ * @endcode
+ */
+#define NYX_DECLARE_LOG_CATEGORY(Name) \
+    extern const ::nyxara::logging::Category Name
+
+/**
+ * @def NYX_DEFINE_LOG_CATEGORY(Name)
+ * @brief Defines a logging category with the given name.
+ * 
+ * This macro creates a const instance of a logging category that can be used
  * throughout the application. The category is initialized once per translation unit.
  * 
  * @code
@@ -21,7 +35,7 @@
  * @endcode
  */
 #define NYX_DEFINE_LOG_CATEGORY(Name) \
-    inline const ::Nyxara::Logging::Category Name(#Name)
+    const ::nyxara::logging::Category Name(#Name)
 
 /**
  * @def NYX_SET_LOG_LEVEL(CAT, LEVEL)
@@ -31,7 +45,7 @@
  * @param LEVEL The desired verbosity level (e.g., Verbosity::Info).
  */
 #define NYX_SET_LOG_LEVEL(CAT, LEVEL) \
-            ::Nyxara::Logging::Logger::SetCategoryLevel(CAT, LEVEL)
+            ::nyxara::logging::Logger::SetCategoryLevel(CAT, LEVEL)
 
 /**
  * @def NYX_LOG(CAT, LEVEL, ...)
@@ -42,7 +56,7 @@
  * @param ... Format string and arguments (fmt-style).
  */
 #define NYX_LOG(CAT, LEVEL, ...) \
-            ::Nyxara::Logging::Logger::Log(CAT, LEVEL, __VA_ARGS__)
+            ::nyxara::logging::Logger::Log(CAT, LEVEL, __VA_ARGS__)
 
 
 // ----------------------------------------------------------------------------
@@ -52,32 +66,32 @@
 /**
  * @brief Logs a critical error message.
  */
-#define NYX_LOG_CRITICAL(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Critical, __VA_ARGS__)
+#define NYX_LOG_CRITICAL(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Critical, __VA_ARGS__)
 
 /**
  * @brief Logs an error message.
  */
-#define NYX_LOG_ERROR(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Error, __VA_ARGS__)
+#define NYX_LOG_ERROR(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Error, __VA_ARGS__)
 
 /**
  * @brief Logs a warning message.
  */
-#define NYX_LOG_WARN(CAT, ...)  NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Warn,  __VA_ARGS__)
+#define NYX_LOG_WARN(CAT, ...)  NYX_LOG(CAT, ::nyxara::logging::Verbosity::Warn,  __VA_ARGS__)
 
 /**
  * @brief Logs an informational message.
  */
-#define NYX_LOG_INFO(CAT, ...)  NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Info,  __VA_ARGS__)
+#define NYX_LOG_INFO(CAT, ...)  NYX_LOG(CAT, ::nyxara::logging::Verbosity::Info,  __VA_ARGS__)
 
 /**
  * @brief Logs a debug message.
  */
-#define NYX_LOG_DEBUG(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Debug, __VA_ARGS__)
+#define NYX_LOG_DEBUG(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Debug, __VA_ARGS__)
 
 /**
  * @brief Logs a trace message.
  */
-#define NYX_LOG_TRACE(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Trace, __VA_ARGS__)
+#define NYX_LOG_TRACE(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Trace, __VA_ARGS__)
 
 /**
  * @def NYX_TRACE_FUNCTION(CAT)
@@ -95,7 +109,16 @@
  * }
  * @endcode
  */
-#define NYX_TRACE_FUNCTION(CAT) ::Nyxara::Logging::FunctionTracer tracer(CAT, __func__)
+#if defined(__GNUC__) || defined(__clang__)
+#define NYX_FUNCTION_NAME __PRETTY_FUNCTION__
+#elif defined(_MSC_VER)
+#define NYX_FUNCTION_NAME __FUNCSIG__
+#else
+#define NYX_FUNCTION_NAME __func__
+#endif
+
+#define NYX_TRACE_FUNCTION(CAT) ::nyxara::logging::FunctionTracer tracer(CAT, NYX_FUNCTION_NAME)
+
 
 // ----------------------------------------------------------------------------
 // Call depth management
@@ -104,11 +127,11 @@
 /**
  * @brief Enables call depth-based log information globally.
  */
-#define NYX_LOG_ENABLE_CALL_DEPTH() ::Nyxara::Logging::Logger::EnableCallDepth()
+#define NYX_LOG_ENABLE_CALL_DEPTH() ::nyxara::logging::Logger::EnableCallDepth()
 
 /**
  * @brief Disables call depth-based log information globally.
  */
-#define NYX_LOG_DISABLE_CALL_DEPTH() ::Nyxara::Logging::Logger::DisableCallDepth()
+#define NYX_LOG_DISABLE_CALL_DEPTH() ::nyxara::logging::Logger::DisableCallDepth()
 
 /** @} */

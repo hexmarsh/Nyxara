@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['setcategorylevel_0',['SetCategoryLevel',['../class_nyxara_1_1_logging_1_1_logger.html#a761d995fe0db7da811239792546d3198',1,'Nyxara::Logging::Logger']]],
-  ['setenabled_1',['SetEnabled',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#ab09ddf71989ee8a79cc4a8355cf4eb30',1,'Nyxara::Logging::CallDepthManager']]]
+  ['pollevents_0',['PollEvents',['../classnyxara_1_1platform_1_1_window.html#ac3b34aa00e7e91e3165d9272a4fbce6b',1,'nyxara::platform::Window']]]
 ];

@@ -5,7 +5,7 @@
 #include "nyxara/core/logging/logger.h"
 #include "nyxara/core/logging/verbosity.h"
 
-namespace Nyxara::Logging 
+namespace nyxara::logging
 {
     /**
      * @brief RAII helper class to trace function entry and exit.
@@ -45,5 +45,5 @@ namespace Nyxara::Logging
         const Category& Category;   ///< Logging category used for messages.
         const char* FunctionName;   ///< Name of the function being traced.
     };
-} // namespace Nyxara::Logging
+} // namespace nyxara::logging
 

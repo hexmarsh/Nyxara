@@ -2,6 +2,7 @@ find_package(spdlog CONFIG REQUIRED)
 
 add_library(nyxara_core_logging
 	category.cpp
+	categories.cpp
 	logger.cpp
 )
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enablecalldepth_0',['EnableCallDepth',['../class_nyxara_1_1_logging_1_1_logger.html#a7843e4b613651b7c6d221d987a97d71f',1,'Nyxara::Logging::Logger']]]
+  ['enablecalldepth_0',['EnableCallDepth',['../classnyxara_1_1logging_1_1_logger.html#a8e082e14a0168b7f80d34f72ebc3dcd7',1,'nyxara::logging::Logger']]]
 ];

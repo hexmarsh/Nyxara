@@ -98,47 +98,61 @@ $(function(){initNavTree('macros_8h_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
 <div class="foldopen" id="foldopen00023" data-start="" data-end="">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga07dac83e94f3df4ffb6150bb777d1e8c">   23</a></span><span class="preprocessor">#define NYX_DEFINE_LOG_CATEGORY(Name) \</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    inline const ::Nyxara::Logging::Category Name(#Name)</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga2043d2e7b7133662e789f67502a944bd">   23</a></span><span class="preprocessor">#define NYX_DECLARE_LOG_CATEGORY(Name) \</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">    extern const ::nyxara::logging::Category Name</span></div>
 </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="foldopen" id="foldopen00033" data-start="" data-end="">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga39c0f0ae222b2642f7b2cd1a4ca33240">   33</a></span><span class="preprocessor">#define NYX_SET_LOG_LEVEL(CAT, LEVEL) \</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">            ::Nyxara::Logging::Logger::SetCategoryLevel(CAT, LEVEL)</span></div>
+<div class="foldopen" id="foldopen00037" data-start="" data-end="">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga07dac83e94f3df4ffb6150bb777d1e8c">   37</a></span><span class="preprocessor">#define NYX_DEFINE_LOG_CATEGORY(Name) \</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">    const ::nyxara::logging::Category Name(#Name)</span></div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
-<div class="foldopen" id="foldopen00044" data-start="" data-end="">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga8453b5e6bb80413fcf2c2364474d3465">   44</a></span><span class="preprocessor">#define NYX_LOG(CAT, LEVEL, ...) \</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">            ::Nyxara::Logging::Logger::Log(CAT, LEVEL, __VA_ARGS__)</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="foldopen" id="foldopen00047" data-start="" data-end="">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga39c0f0ae222b2642f7b2cd1a4ca33240">   47</a></span><span class="preprocessor">#define NYX_SET_LOG_LEVEL(CAT, LEVEL) \</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">            ::nyxara::logging::Logger::SetCategoryLevel(CAT, LEVEL)</span></div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// Convenience log level macros</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga0f518aeeae891bcfd48f11956b4b9977">   55</a></span><span class="preprocessor">#define NYX_LOG_CRITICAL(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Critical, __VA_ARGS__)</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga529574f3eb210c9ddab759cd8ee8d6c9">   60</a></span><span class="preprocessor">#define NYX_LOG_ERROR(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Error, __VA_ARGS__)</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga1b552697901e7fa7bc454735d2b1bab9">   65</a></span><span class="preprocessor">#define NYX_LOG_WARN(CAT, ...)  NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Warn,  __VA_ARGS__)</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga3b3c88cbd45e052e7a3ee7c526fa2bcf">   70</a></span><span class="preprocessor">#define NYX_LOG_INFO(CAT, ...)  NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Info,  __VA_ARGS__)</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga6e858d98f5f644fb8021355f8f66fc1b">   75</a></span><span class="preprocessor">#define NYX_LOG_DEBUG(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Debug, __VA_ARGS__)</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group___logging_macros.html#gaa9d485905753dd13dac89f0406c1e14b">   80</a></span><span class="preprocessor">#define NYX_LOG_TRACE(CAT, ...) NYX_LOG(CAT, ::Nyxara::Logging::Verbosity::Trace, __VA_ARGS__)</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga9a1204cd668d0df4128f45199d8b2cf8">   98</a></span><span class="preprocessor">#define NYX_TRACE_FUNCTION(CAT) ::Nyxara::Logging::FunctionTracer tracer(CAT, __func__)</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// Call depth management</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga3d2dd99c5aa8345d89421af8bad47172">  107</a></span><span class="preprocessor">#define NYX_LOG_ENABLE_CALL_DEPTH() ::Nyxara::Logging::Logger::EnableCallDepth()</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga141774c42e189a3e366f2bc5c8b1038d">  112</a></span><span class="preprocessor">#define NYX_LOG_DISABLE_CALL_DEPTH() ::Nyxara::Logging::Logger::DisableCallDepth()</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="foldopen" id="foldopen00058" data-start="" data-end="">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga8453b5e6bb80413fcf2c2364474d3465">   58</a></span><span class="preprocessor">#define NYX_LOG(CAT, LEVEL, ...) \</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">            ::nyxara::logging::Logger::Log(CAT, LEVEL, __VA_ARGS__)</span></div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// Convenience log level macros</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga0f518aeeae891bcfd48f11956b4b9977">   69</a></span><span class="preprocessor">#define NYX_LOG_CRITICAL(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Critical, __VA_ARGS__)</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga529574f3eb210c9ddab759cd8ee8d6c9">   74</a></span><span class="preprocessor">#define NYX_LOG_ERROR(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Error, __VA_ARGS__)</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga1b552697901e7fa7bc454735d2b1bab9">   79</a></span><span class="preprocessor">#define NYX_LOG_WARN(CAT, ...)  NYX_LOG(CAT, ::nyxara::logging::Verbosity::Warn,  __VA_ARGS__)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga3b3c88cbd45e052e7a3ee7c526fa2bcf">   84</a></span><span class="preprocessor">#define NYX_LOG_INFO(CAT, ...)  NYX_LOG(CAT, ::nyxara::logging::Verbosity::Info,  __VA_ARGS__)</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga6e858d98f5f644fb8021355f8f66fc1b">   89</a></span><span class="preprocessor">#define NYX_LOG_DEBUG(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Debug, __VA_ARGS__)</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="group___logging_macros.html#gaa9d485905753dd13dac89f0406c1e14b">   94</a></span><span class="preprocessor">#define NYX_LOG_TRACE(CAT, ...) NYX_LOG(CAT, ::nyxara::logging::Verbosity::Trace, __VA_ARGS__)</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#if defined(__GNUC__) || defined(__clang__)</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#define NYX_FUNCTION_NAME __PRETTY_FUNCTION__</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#elif defined(_MSC_VER)</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#define NYX_FUNCTION_NAME __FUNCSIG__</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#define NYX_FUNCTION_NAME __func__</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga9a1204cd668d0df4128f45199d8b2cf8">  120</a></span><span class="preprocessor">#define NYX_TRACE_FUNCTION(CAT) ::nyxara::logging::FunctionTracer tracer(CAT, NYX_FUNCTION_NAME)</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">// Call depth management</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga3d2dd99c5aa8345d89421af8bad47172">  130</a></span><span class="preprocessor">#define NYX_LOG_ENABLE_CALL_DEPTH() ::nyxara::logging::Logger::EnableCallDepth()</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group___logging_macros.html#ga141774c42e189a3e366f2bc5c8b1038d">  135</a></span><span class="preprocessor">#define NYX_LOG_DISABLE_CALL_DEPTH() ::nyxara::logging::Logger::DisableCallDepth()</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

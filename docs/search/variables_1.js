@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['renderer_0',['Renderer',['../namespace_nyxara_1_1_logging.html#abcf4a48f80222efae3486dc26ff88238',1,'Nyxara::Logging']]]
+  ['fullscreen_0',['FullScreen',['../structnyxara_1_1platform_1_1_window_create_info.html#ad0cf26211f7edb66ef574afebf281086',1,'nyxara::platform::WindowCreateInfo']]]
 ];

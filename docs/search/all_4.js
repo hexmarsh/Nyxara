@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['getdepth_0',['GetDepth',['../class_nyxara_1_1_logging_1_1_call_depth_manager.html#a62ecbebc9e16782f4086e4b07a48b738',1,'Nyxara::Logging::CallDepthManager']]],
-  ['getlogger_1',['GetLogger',['../class_nyxara_1_1_logging_1_1_category.html#aff578c30157fdd3e2b276dc37ca0590f',1,'Nyxara::Logging::Category']]],
-  ['getname_2',['GetName',['../class_nyxara_1_1_logging_1_1_category.html#a69a28f54e10a1edb73e051d7ee7d9b83',1,'Nyxara::Logging::Category']]],
-  ['getorcreatelogger_3',['GetOrCreateLogger',['../class_nyxara_1_1_logging_1_1_logger.html#af9f69d4e17ece9582da1f28adee539ac',1,'Nyxara::Logging::Logger']]]
+  ['fullscreen_0',['FullScreen',['../structnyxara_1_1platform_1_1_window_create_info.html#ad0cf26211f7edb66ef574afebf281086',1,'nyxara::platform::WindowCreateInfo']]],
+  ['functiontracer_1',['FunctionTracer',['../classnyxara_1_1logging_1_1_function_tracer.html',1,'nyxara::logging::FunctionTracer'],['../classnyxara_1_1logging_1_1_function_tracer.html#ada29a75149e357da459fe88c8844ea27',1,'nyxara::logging::FunctionTracer::FunctionTracer()']]]
 ];
