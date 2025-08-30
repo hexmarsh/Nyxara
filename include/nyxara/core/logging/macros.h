@@ -1,5 +1,30 @@
 #pragma once
 
+/**
+ * @file macros.h
+ * @brief Logging and tracing macros for the Nyxara logging system.
+ * 
+ * This header defines a collection of macros that simplify structured logging,
+ * category management, and function-level tracing within the Nyxara application.
+ * 
+ * It provides macro interfaces for:
+ * - Declaring and defining logging categories
+ * - Logging messages with verbosity levels
+ * - Automatically tracing function entry and exit
+ * - Managing call depth tracking in logs
+ * 
+ * These macros wrap functionality provided by the Nyxara logging system,
+ * which is built on top of spdlog. They offer a streamlined, consistent way
+ * to integrate logging into application code with minimal boilerplate.
+ * 
+ * @ingroup LoggingMacros
+ * 
+ * @note These macros depend on components defined in 'logger.h' and 'function_tracer.h'
+ * 
+ * @see nyxara::logging::Logger
+ * @see nyxara::logging::FunctionTracer
+ */
+
 #include "nyxara/core/logging/function_tracer.h"
 #include "nyxara/core/logging/logger.h"
 

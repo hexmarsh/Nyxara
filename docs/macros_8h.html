@@ -88,9 +88,12 @@ $(function(){initNavTree('macros_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">macros.h File Reference</div></div>
+  <div class="headertitle"><div class="title">macros.h File Reference<div class="ingroups"><a class="el" href="group___logging_macros.html">Nyxara Logging Macros</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Logging and tracing macros for the Nyxara logging system.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="function__tracer_8h_source.html">nyxara/core/logging/function_tracer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="logger_8h_source.html">nyxara/core/logging/logger.h</a>&quot;</code><br />
 </div>
@@ -98,14 +101,10 @@ $(function(){initNavTree('macros_8h.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:gab79501e387d0d51a19281bf654d569c2" id="r_gab79501e387d0d51a19281bf654d569c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#gab79501e387d0d51a19281bf654d569c2">NYX_DEFINE_LOG_CATEGORY_IMPL</a>(Name)</td></tr>
-<tr class="memdesc:gab79501e387d0d51a19281bf654d569c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the internal function that returns a static logging category instance.  <br /></td></tr>
-<tr class="memitem:ga07dac83e94f3df4ffb6150bb777d1e8c" id="r_ga07dac83e94f3df4ffb6150bb777d1e8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga07dac83e94f3df4ffb6150bb777d1e8c">NYX_DEFINE_LOG_CATEGORY</a>(Name)</td></tr>
-<tr class="memdesc:ga07dac83e94f3df4ffb6150bb777d1e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a static logging category with the given name.  <br /></td></tr>
-<tr class="memitem:ga6f3e5d737aac0464cf6f51ee4ce554f0" id="r_ga6f3e5d737aac0464cf6f51ee4ce554f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga6f3e5d737aac0464cf6f51ee4ce554f0">NYX_GET_LOG_CATEGORY</a>(Name)</td></tr>
-<tr class="memdesc:ga6f3e5d737aac0464cf6f51ee4ce554f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reference to the logging category function for a given name.  <br /></td></tr>
 <tr class="memitem:ga2043d2e7b7133662e789f67502a944bd" id="r_ga2043d2e7b7133662e789f67502a944bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga2043d2e7b7133662e789f67502a944bd">NYX_DECLARE_LOG_CATEGORY</a>(Name)</td></tr>
 <tr class="memdesc:ga2043d2e7b7133662e789f67502a944bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a logging category defined elsewhere.  <br /></td></tr>
+<tr class="memitem:ga07dac83e94f3df4ffb6150bb777d1e8c" id="r_ga07dac83e94f3df4ffb6150bb777d1e8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga07dac83e94f3df4ffb6150bb777d1e8c">NYX_DEFINE_LOG_CATEGORY</a>(Name)</td></tr>
+<tr class="memdesc:ga07dac83e94f3df4ffb6150bb777d1e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a logging category with the given name.  <br /></td></tr>
 <tr class="memitem:ga39c0f0ae222b2642f7b2cd1a4ca33240" id="r_ga39c0f0ae222b2642f7b2cd1a4ca33240"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga39c0f0ae222b2642f7b2cd1a4ca33240">NYX_SET_LOG_LEVEL</a>(CAT,  LEVEL)</td></tr>
 <tr class="memdesc:ga39c0f0ae222b2642f7b2cd1a4ca33240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the verbosity level for the specified logging category.  <br /></td></tr>
 <tr class="memitem:ga8453b5e6bb80413fcf2c2364474d3465" id="r_ga8453b5e6bb80413fcf2c2364474d3465"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga8453b5e6bb80413fcf2c2364474d3465">NYX_LOG</a>(CAT,  LEVEL, ...)</td></tr>
@@ -115,21 +114,37 @@ Macros</h2></td></tr>
 <tr class="memitem:ga529574f3eb210c9ddab759cd8ee8d6c9" id="r_ga529574f3eb210c9ddab759cd8ee8d6c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga529574f3eb210c9ddab759cd8ee8d6c9">NYX_LOG_ERROR</a>(CAT, ...)</td></tr>
 <tr class="memdesc:ga529574f3eb210c9ddab759cd8ee8d6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an error message.  <br /></td></tr>
 <tr class="memitem:ga1b552697901e7fa7bc454735d2b1bab9" id="r_ga1b552697901e7fa7bc454735d2b1bab9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga1b552697901e7fa7bc454735d2b1bab9">NYX_LOG_WARN</a>(CAT, ...)</td></tr>
-<tr class="memdesc:ga1b552697901e7fa7bc454735d2b1bab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an warning message.  <br /></td></tr>
+<tr class="memdesc:ga1b552697901e7fa7bc454735d2b1bab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a warning message.  <br /></td></tr>
 <tr class="memitem:ga3b3c88cbd45e052e7a3ee7c526fa2bcf" id="r_ga3b3c88cbd45e052e7a3ee7c526fa2bcf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga3b3c88cbd45e052e7a3ee7c526fa2bcf">NYX_LOG_INFO</a>(CAT, ...)</td></tr>
 <tr class="memdesc:ga3b3c88cbd45e052e7a3ee7c526fa2bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an informational message.  <br /></td></tr>
 <tr class="memitem:ga6e858d98f5f644fb8021355f8f66fc1b" id="r_ga6e858d98f5f644fb8021355f8f66fc1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga6e858d98f5f644fb8021355f8f66fc1b">NYX_LOG_DEBUG</a>(CAT, ...)</td></tr>
 <tr class="memdesc:ga6e858d98f5f644fb8021355f8f66fc1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a debug message.  <br /></td></tr>
 <tr class="memitem:gaa9d485905753dd13dac89f0406c1e14b" id="r_gaa9d485905753dd13dac89f0406c1e14b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#gaa9d485905753dd13dac89f0406c1e14b">NYX_LOG_TRACE</a>(CAT, ...)</td></tr>
 <tr class="memdesc:gaa9d485905753dd13dac89f0406c1e14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a trace message.  <br /></td></tr>
+<tr class="memitem:ga851cb98e3244a5a55a4714a8e724c325" id="r_ga851cb98e3244a5a55a4714a8e724c325"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NYX_FUNCTION_NAME</b>&#160;&#160;&#160;__func__</td></tr>
 <tr class="memitem:ga9a1204cd668d0df4128f45199d8b2cf8" id="r_ga9a1204cd668d0df4128f45199d8b2cf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga9a1204cd668d0df4128f45199d8b2cf8">NYX_TRACE_FUNCTION</a>(CAT)</td></tr>
 <tr class="memdesc:ga9a1204cd668d0df4128f45199d8b2cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs entry and exit of the current function using FunctionTracer.  <br /></td></tr>
 <tr class="memitem:ga3d2dd99c5aa8345d89421af8bad47172" id="r_ga3d2dd99c5aa8345d89421af8bad47172"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga3d2dd99c5aa8345d89421af8bad47172">NYX_LOG_ENABLE_CALL_DEPTH</a>()</td></tr>
-<tr class="memdesc:ga3d2dd99c5aa8345d89421af8bad47172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables call depth-based log indentation globally.  <br /></td></tr>
+<tr class="memdesc:ga3d2dd99c5aa8345d89421af8bad47172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables call depth-based log information globally.  <br /></td></tr>
 <tr class="memitem:ga141774c42e189a3e366f2bc5c8b1038d" id="r_ga141774c42e189a3e366f2bc5c8b1038d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___logging_macros.html#ga141774c42e189a3e366f2bc5c8b1038d">NYX_LOG_DISABLE_CALL_DEPTH</a>()</td></tr>
-<tr class="memdesc:ga141774c42e189a3e366f2bc5c8b1038d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables call depth-based log indentation globally.  <br /></td></tr>
+<tr class="memdesc:ga141774c42e189a3e366f2bc5c8b1038d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables call depth-based log information globally.  <br /></td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Logging and tracing macros for the Nyxara logging system. </p>
+<p>This header defines a collection of macros that simplify structured logging, category management, and function-level tracing within the Nyxara application.</p>
+<p>It provides macro interfaces for:</p><ul>
+<li>Declaring and defining logging categories</li>
+<li>Logging messages with verbosity levels</li>
+<li>Automatically tracing function entry and exit</li>
+<li>Managing call depth tracking in logs</li>
+</ul>
+<p>These macros wrap functionality provided by the Nyxara logging system, which is built on top of spdlog. They offer a streamlined, consistent way to integrate logging into application code with minimal boilerplate.</p>
+<dl class="section note"><dt>Note</dt><dd>These macros depend on components defined in '<a class="el" href="logger_8h.html" title="Core logging interface for the Nyxara engine.">logger.h</a>' and '<a class="el" href="function__tracer_8h.html" title="RAII-based function tracing utility for the Nyxara logging system.">function_tracer.h</a>'</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classnyxara_1_1logging_1_1_logger.html" title="Core logging utility for the Nyxara engine.">nyxara::logging::Logger</a> </dd>
+<dd>
+<a class="el" href="classnyxara_1_1logging_1_1_function_tracer.html" title="RAII helper class to trace function entry and exit.">nyxara::logging::FunctionTracer</a> </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -142,7 +157,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_2e5d5ca82668f93ed070f1b4a939b86d.html">nyxara</a></li><li class="navelem"><a href="dir_62009f043239181e11817920b482cfb6.html">core</a></li><li class="navelem"><a href="dir_4fd7a1b475e79bdb059ec4ff1fded433.html">logging</a></li><li class="navelem"><a href="macros_8h.html">macros.h</a></li>
+    <li class="navelem"><a href="dir_6168fb9cd43be165f847ccd34280df87.html">nyxara</a></li><li class="navelem"><a href="dir_26d6dce631b7db4a1eafeba382b8bab2.html">core</a></li><li class="navelem"><a href="dir_7a537ebf00d93ab03692e3f1ccbb4af4.html">logging</a></li><li class="navelem"><a href="macros_8h.html">macros.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

@@ -2,8 +2,6 @@ var macros_8h =
 [
     [ "NYX_DECLARE_LOG_CATEGORY", "group___logging_macros.html#ga2043d2e7b7133662e789f67502a944bd", null ],
     [ "NYX_DEFINE_LOG_CATEGORY", "group___logging_macros.html#ga07dac83e94f3df4ffb6150bb777d1e8c", null ],
-    [ "NYX_DEFINE_LOG_CATEGORY_IMPL", "group___logging_macros.html#gab79501e387d0d51a19281bf654d569c2", null ],
-    [ "NYX_GET_LOG_CATEGORY", "group___logging_macros.html#ga6f3e5d737aac0464cf6f51ee4ce554f0", null ],
     [ "NYX_LOG", "group___logging_macros.html#ga8453b5e6bb80413fcf2c2364474d3465", null ],
     [ "NYX_LOG_CRITICAL", "group___logging_macros.html#ga0f518aeeae891bcfd48f11956b4b9977", null ],
     [ "NYX_LOG_DEBUG", "group___logging_macros.html#ga6e858d98f5f644fb8021355f8f66fc1b", null ],

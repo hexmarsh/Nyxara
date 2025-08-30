@@ -92,19 +92,29 @@ $(function(){initNavTree('call__depth__manager_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Per-thread call depth tracking for structured logging in Nyxara.  
+<a href="#details">More...</a></p>
+
 <p><a href="call__depth__manager_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:Nyxara_3A_3ALogging_3A_3ACallDepthManager" id="r_Nyxara_3A_3ALogging_3A_3ACallDepthManager"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_nyxara_1_1_logging_1_1_call_depth_manager.html">Nyxara::Logging::CallDepthManager</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages logging indentation based on call depth (per thread).  <a href="class_nyxara_1_1_logging_1_1_call_depth_manager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:nyxara_3A_3Alogging_3A_3ACallDepthManager" id="r_nyxara_3A_3Alogging_3A_3ACallDepthManager"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnyxara_1_1logging_1_1_call_depth_manager.html">nyxara::logging::CallDepthManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages logging depth based on call depth (per thread).  <a href="classnyxara_1_1logging_1_1_call_depth_manager.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:Nyxara" id="r_Nyxara"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_nyxara.html">Nyxara</a></td></tr>
-<tr class="memitem:Nyxara_3A_3ALogging" id="r_Nyxara_3A_3ALogging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_nyxara_1_1_logging.html">Nyxara::Logging</a></td></tr>
+<tr class="memitem:nyxara_3A_3Alogging" id="r_nyxara_3A_3Alogging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenyxara_1_1logging.html">nyxara::logging</a></td></tr>
+<tr class="memdesc:namespacenyxara_1_1logging"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains logging utilities for the Nyxara engine. <br /></td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Per-thread call depth tracking for structured logging in Nyxara. </p>
+<p>This file defines the <a class="el" href="classnyxara_1_1logging_1_1_call_depth_manager.html" title="Manages logging depth based on call depth (per thread).">nyxara::logging::CallDepthManager</a> class, which manages per-thread call depth tracking to enhance log output with indentation or hierarchy information. This is particularly useful for tracing nested function calls or recursive logic within complex systems.</p>
+<p>Call depth tracking is integrated with the logging system and is automatically used by <a class="el" href="classnyxara_1_1logging_1_1_function_tracer.html" title="RAII helper class to trace function entry and exit.">nyxara::logging::FunctionTracer</a>. It can also be manually enabled or disabled via <a class="el" href="classnyxara_1_1logging_1_1_call_depth_manager.html#ae64a00579376993f352f12f691057325" title="Enables or disables call depth information tracking.">nyxara::logging::CallDepthManager::SetEnabled()</a>.</p>
+<p>When enabled, the current call depth is prepended to log messages (usually at Verbosity::Trace level) to reflect the structure of the call stack, aiding in debugging and performance tracing.</p>
+<dl class="section note"><dt>Note</dt><dd>All call depth state is maintained per-thread using <span class="tt">thread_local</span> variables.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classnyxara_1_1logging_1_1_function_tracer.html" title="RAII helper class to trace function entry and exit.">nyxara::logging::FunctionTracer</a> </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -117,7 +127,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_2e5d5ca82668f93ed070f1b4a939b86d.html">nyxara</a></li><li class="navelem"><a href="dir_62009f043239181e11817920b482cfb6.html">core</a></li><li class="navelem"><a href="dir_4fd7a1b475e79bdb059ec4ff1fded433.html">logging</a></li><li class="navelem"><a href="call__depth__manager_8h.html">call_depth_manager.h</a></li>
+    <li class="navelem"><a href="dir_6168fb9cd43be165f847ccd34280df87.html">nyxara</a></li><li class="navelem"><a href="dir_26d6dce631b7db4a1eafeba382b8bab2.html">core</a></li><li class="navelem"><a href="dir_7a537ebf00d93ab03692e3f1ccbb4af4.html">logging</a></li><li class="navelem"><a href="call__depth__manager_8h.html">call_depth_manager.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

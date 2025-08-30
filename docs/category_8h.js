@@ -1,4 +1,4 @@
 var category_8h =
 [
-    [ "Nyxara::Logging::Category", "class_nyxara_1_1_logging_1_1_category.html", "class_nyxara_1_1_logging_1_1_category" ]
+    [ "nyxara::logging::Category", "classnyxara_1_1logging_1_1_category.html", "classnyxara_1_1logging_1_1_category" ]
 ];

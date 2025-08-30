@@ -1,5 +1,28 @@
 #pragma once
 
+/**
+ * @file verbosity.h
+ * @brief Defines custom logging verbosity levels and provides integration with spdlog.
+ * 
+ * This header declares the ::nyxara::logging::Verbosity enumeration, which specifies
+ * different levels of logging detail used throughout the application.
+ * 
+ * It also provides the ::nyxara::logging::to_spdlog_level function for converting
+ * custom verbosity levels to the corresponding spdlog logging levels, enabling seamless
+ * integration with the spdlog logging framework.
+ * 
+ * @details
+ * The Verbosity levels range from ::nyxara::logging::Verbosity::Critical (for fatal errors)
+ * to ::nyxara::logging::Verbosity::Trace (for fine-grained debug output), with
+ * ::nyxara::logging::Verbosity::None disabling logging entirely.
+ * 
+ * These levels are used to filter which log messages are emitted at runtime,
+ * based on the configured verbosity for a logging category or component.
+ * 
+ * @note if an invalid or ::nyxara::logging::Verbosity::None level is passed to
+ * ::nyxara::logging::to_spdlog_level, it default to spdlog::level::off.
+ */
+
 #include <spdlog/spdlog.h>
 
 namespace nyxara::logging

@@ -1,4 +1,4 @@
 var call__depth__manager_8h =
 [
-    [ "Nyxara::Logging::CallDepthManager", "class_nyxara_1_1_logging_1_1_call_depth_manager.html", "class_nyxara_1_1_logging_1_1_call_depth_manager" ]
+    [ "nyxara::logging::CallDepthManager", "classnyxara_1_1logging_1_1_call_depth_manager.html", "classnyxara_1_1logging_1_1_call_depth_manager" ]
 ];

@@ -1,5 +1,27 @@
 #pragma once
 
+/**
+ * @file category.h
+ * @brief Defines the Category class for organizing logs in the Nyxara engine.
+ *
+ * This header provides the declaration of the ::nyxara::logging::Category class,
+ * which represents a named logging category used to group and manage log output
+ * for specific engine subsystems or modules (e.g., "Renderer", "Audio", "Scripting").
+ *
+ * Each category wraps a dedicated spdlog logger instance and allows for independent
+ * configuration of verbosity and formatting via the ::nyxara::logging::Logger system.
+ *
+ * @details
+ * Logging categories help structure log output, improve filtering, and provide
+ * more precise control over what information is emitted by different parts of the system.
+ *
+ * Category objects are typically created at a global scope and used in conjunction
+ * with macros or the Logger class for structured logging.
+ *
+ * @see nyxara::logging::Logger
+ * @see nyxara::logging::Verbosity
+ */
+
 #include <memory>
 #include <string>
 

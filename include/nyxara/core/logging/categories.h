@@ -1,7 +1,5 @@
 #pragma once
 
-#include "nyxara/core/logging/macros.h"
-
 /**
  * @file categories.h
  * @brief Defines global logging categories used throughout the Nyxara engine.
@@ -11,6 +9,8 @@
  *
  * Categories declared here are intended for global/shared use across subsystems.
  */
+
+#include "nyxara/core/logging/macros.h"
 
  /**
  * @brief Core systems logging category.

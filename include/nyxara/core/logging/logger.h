@@ -1,5 +1,34 @@
 #pragma once
 
+/**
+ * @file logger.h
+ * @brief Core logging interface for the Nyxara engine.
+ *
+ * This header defines the ::nyxara::logging::Logger class, which serves as the
+ * central entry point for logging functionality in the Nyxara engine.
+ *
+ * It provides static methods for:
+ * - Initializing the logging system
+ * - Creating and managing loggers by category
+ * - Logging messages at various verbosity levels
+ * - Enabling or disabling call-depth tracking in logs
+ *
+ * Logging is typically organized by categories defined using macros or manually,
+ * and can be filtered at runtime based on verbosity levels.
+ * The system supports both eager and lazy initialization for flexibility.
+ *
+ * @details
+ * Call-depth tracking is optional and can be toggled using
+ * EnableCallDepth() and DisableCallDepth(), providing insight into nested
+ * function calls or recursive logic.
+ *
+ * The Logger uses the spdlog backend for high-performance logging.
+ *
+ * @see nyxara::logging::Verbosity
+ * @see nyxara::logging::Category
+ * @see nyxara::logging::CallDepthManager
+ */
+
 #include <memory>
 #include <shared_mutex>
 #include <string>

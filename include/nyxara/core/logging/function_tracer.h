@@ -1,5 +1,29 @@
 #pragma once
 
+/**
+ * @file function_tracer.h
+ * @brief RAII-based function tracing utility for the Nyxara logging system.
+ *
+ * This header defines the ::nyxara::logging::FunctionTracer class, which provides
+ * automatic logging of function entry and exit at ::nyxara::logging::Verbosity::Trace level.
+ *
+ * Designed for use at the beginning of a function scope, the tracer:
+ * - Logs a formatted "Entering" message on construction
+ * - Logs a "Leaving" message on destruction
+ * - Integrates with the call-depth manager to provide structured, nested output
+ *
+ * The result is a detailed trace of function calls that reflects call stack depth,
+ * aiding in debugging complex control flows or recursive functions.
+ *
+ * @details
+ * This utility is especially useful when paired with the @ref NYX_TRACE_FUNCTION macro,
+ * which automatically injects the current function name across compilers.
+ *
+ * @see nyxara::logging::Logger
+ * @see nyxara::logging::CallDepthManager
+ * @see NYX_TRACE_FUNCTION
+ */
+
 #include "nyxara/core/logging/call_depth_manager.h"
 #include "nyxara/core/logging/category.h"
 #include "nyxara/core/logging/logger.h"

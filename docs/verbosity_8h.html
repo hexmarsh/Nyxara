@@ -91,36 +91,46 @@ $(function(){initNavTree('verbosity_8h.html','',''); });
   <div class="headertitle"><div class="title">verbosity.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Defines custom logging verbosity levels and provides integration with spdlog.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;spdlog/spdlog.h&gt;</code><br />
 </div>
 <p><a href="verbosity_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:Nyxara" id="r_Nyxara"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_nyxara.html">Nyxara</a></td></tr>
-<tr class="memitem:Nyxara_3A_3ALogging" id="r_Nyxara_3A_3ALogging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_nyxara_1_1_logging.html">Nyxara::Logging</a></td></tr>
+<tr class="memitem:nyxara_3A_3Alogging" id="r_nyxara_3A_3Alogging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenyxara_1_1logging.html">nyxara::logging</a></td></tr>
+<tr class="memdesc:namespacenyxara_1_1logging"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains logging utilities for the Nyxara engine. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aaa79e21b618e988c5cb03df4a58c0301" id="r_aaa79e21b618e988c5cb03df4a58c0301"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301">Nyxara::Logging::Verbosity</a> { <br />
-&#160;&#160;<a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a6adf97f83acf6453d4a6a4b1070f3754">Nyxara::Logging::None</a> = 0
-, <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a278d01e5af56273bae1bb99a98b370cd">Nyxara::Logging::Critical</a>
-, <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a902b0d55fddef6f8d651fe1035b7d4bd">Nyxara::Logging::Error</a>
-, <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a56525ae64d370c0b448ac0d60710ef17">Nyxara::Logging::Warn</a>
+<tr class="memitem:a35a61f47cb146845771dc962a49f4a04" id="r_a35a61f47cb146845771dc962a49f4a04"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04">nyxara::logging::Verbosity</a> { <br />
+&#160;&#160;<a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a6adf97f83acf6453d4a6a4b1070f3754">nyxara::logging::None</a> = 0
+, <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a278d01e5af56273bae1bb99a98b370cd">nyxara::logging::Critical</a>
+, <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a902b0d55fddef6f8d651fe1035b7d4bd">nyxara::logging::Error</a>
+, <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a56525ae64d370c0b448ac0d60710ef17">nyxara::logging::Warn</a>
 , <br />
-&#160;&#160;<a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301a4059b0251f66a18cb56f544728796875">Nyxara::Logging::Info</a>
-, <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301aa603905470e2a5b8c13e96b579ef0dba">Nyxara::Logging::Debug</a>
-, <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301add4ec0ac4e58f7c32a01244ae91150b1">Nyxara::Logging::Trace</a>
+&#160;&#160;<a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a4059b0251f66a18cb56f544728796875">nyxara::logging::Info</a>
+, <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04aa603905470e2a5b8c13e96b579ef0dba">nyxara::logging::Debug</a>
+, <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04add4ec0ac4e58f7c32a01244ae91150b1">nyxara::logging::Trace</a>
 <br />
  }</td></tr>
-<tr class="memdesc:aaa79e21b618e988c5cb03df4a58c0301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the verbosity level of a log message.  <a href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301">More...</a><br /></td></tr>
+<tr class="memdesc:a35a61f47cb146845771dc962a49f4a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the verbosity level of a log message.  <a href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac07a538e4763e00ed371608a108dedf2" id="r_ac07a538e4763e00ed371608a108dedf2"><td class="memItemLeft" align="right" valign="top">constexpr spdlog::level::level_enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_nyxara_1_1_logging.html#ac07a538e4763e00ed371608a108dedf2">Nyxara::Logging::to_spdlog_level</a> (<a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301">Verbosity</a> level) noexcept</td></tr>
-<tr class="memdesc:ac07a538e4763e00ed371608a108dedf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="namespace_nyxara_1_1_logging.html#aaa79e21b618e988c5cb03df4a58c0301" title="Represents the verbosity level of a log message.">Verbosity</a> level to its corresponding spdlog level.  <br /></td></tr>
+<tr class="memitem:a4e7a0ff8ec8d8c848ce24ca7996ab9e9" id="r_a4e7a0ff8ec8d8c848ce24ca7996ab9e9"><td class="memItemLeft" align="right" valign="top">constexpr spdlog::level::level_enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenyxara_1_1logging.html#a4e7a0ff8ec8d8c848ce24ca7996ab9e9">nyxara::logging::to_spdlog_level</a> (<a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04">Verbosity</a> level) noexcept</td></tr>
+<tr class="memdesc:a4e7a0ff8ec8d8c848ce24ca7996ab9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04" title="Represents the verbosity level of a log message.">Verbosity</a> level to its corresponding spdlog level.  <br /></td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Defines custom logging verbosity levels and provides integration with spdlog. </p>
+<p>This header declares the <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04" title="Represents the verbosity level of a log message.">nyxara::logging::Verbosity</a> enumeration, which specifies different levels of logging detail used throughout the application.</p>
+<p>It also provides the <a class="el" href="namespacenyxara_1_1logging.html#a4e7a0ff8ec8d8c848ce24ca7996ab9e9" title="Converts a Verbosity level to its corresponding spdlog level.">nyxara::logging::to_spdlog_level</a> function for converting custom verbosity levels to the corresponding spdlog logging levels, enabling seamless integration with the spdlog logging framework.</p>
+<p>The Verbosity levels range from <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a278d01e5af56273bae1bb99a98b370cd" title="Critical failures (non-recoverable)">nyxara::logging::Verbosity::Critical</a> (for fatal errors) to <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04add4ec0ac4e58f7c32a01244ae91150b1" title="Very detailed internal state (high-frequency)">nyxara::logging::Verbosity::Trace</a> (for fine-grained debug output), with <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a6adf97f83acf6453d4a6a4b1070f3754" title="Logging disabled.">nyxara::logging::Verbosity::None</a> disabling logging entirely.</p>
+<p>These levels are used to filter which log messages are emitted at runtime, based on the configured verbosity for a logging category or component.</p>
+<dl class="section note"><dt>Note</dt><dd>if an invalid or <a class="el" href="namespacenyxara_1_1logging.html#a35a61f47cb146845771dc962a49f4a04a6adf97f83acf6453d4a6a4b1070f3754" title="Logging disabled.">nyxara::logging::Verbosity::None</a> level is passed to <a class="el" href="namespacenyxara_1_1logging.html#a4e7a0ff8ec8d8c848ce24ca7996ab9e9" title="Converts a Verbosity level to its corresponding spdlog level.">nyxara::logging::to_spdlog_level</a>, it default to spdlog::level::off. </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -133,7 +143,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_2e5d5ca82668f93ed070f1b4a939b86d.html">nyxara</a></li><li class="navelem"><a href="dir_62009f043239181e11817920b482cfb6.html">core</a></li><li class="navelem"><a href="dir_4fd7a1b475e79bdb059ec4ff1fded433.html">logging</a></li><li class="navelem"><a href="verbosity_8h.html">verbosity.h</a></li>
+    <li class="navelem"><a href="dir_6168fb9cd43be165f847ccd34280df87.html">nyxara</a></li><li class="navelem"><a href="dir_26d6dce631b7db4a1eafeba382b8bab2.html">core</a></li><li class="navelem"><a href="dir_7a537ebf00d93ab03692e3f1ccbb4af4.html">logging</a></li><li class="navelem"><a href="verbosity_8h.html">verbosity.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>
