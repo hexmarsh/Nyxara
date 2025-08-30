@@ -11,7 +11,7 @@ namespace nyxara::platform
 		explicit GLFWWindow(const WindowCreateInfo& info)
 		{
 			NYX_TRACE_FUNCTION(Platform);
-			NYX_LOG_INFO(Platform, "Initializing GLFW window: {}x{}, title: '{}', fullscreen: {}, resizable: {}", 
+			NYX_LOG_INFO(Platform, "Creating GLFW window: {}x{}, title: '{}', fullscreen: {}, resizable: {}",
 				info.Width, info.Height, info.Title, info.FullScreen, info.Resizable);
 
 			if (!glfwInit())
@@ -20,9 +20,8 @@ namespace nyxara::platform
 				throw std::runtime_error("Failed to initialize GLFW");
 			}
 
-			NYX_LOG_DEBUG(Platform, "GLFW initialized successfully");
-
 			glfwWindowHint(GLFW_RESIZABLE, info.Resizable ? GLFW_TRUE : GLFW_FALSE);
+			glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
 			GLFWmonitor* monitor = nullptr;
 			int width = static_cast<int>(info.Width);
@@ -34,7 +33,7 @@ namespace nyxara::platform
 				const GLFWvidmode* mode = glfwGetVideoMode(monitor);
 				width = mode->width;
 				height = mode->height;
-				NYX_LOG_DEBUG(Platform, "Using fullscreen mode: {}x{}", width, height);
+				NYX_LOG_DEBUG(Platform, "Fullscreen mode: {}x{}", width, height);
 			}
 
 			Window = glfwCreateWindow(width, height, info.Title, monitor, nullptr);
@@ -46,43 +45,32 @@ namespace nyxara::platform
 				throw std::runtime_error("Failed to create GLFW window");
 			}
 
-			NYX_LOG_INFO(Platform, "GLFW window created successfully");
 			glfwMakeContextCurrent(Window);
-			NYX_LOG_DEBUG(Platform, "GLFW window context made current");
+			NYX_LOG_INFO(Platform, "GLFW window created and context initialized");
 		}
 
 		~GLFWWindow() override
 		{
 			NYX_TRACE_FUNCTION(Platform);
 			NYX_LOG_INFO(Platform, "Destroying GLFW window");
-			
+
 			glfwDestroyWindow(Window);
-			NYX_LOG_DEBUG(Platform, "GLFW window destroyed");
-			
 			glfwTerminate();
-			NYX_LOG_DEBUG(Platform, "GLFW terminated");
 		}
 
 		void PollEvents() override
 		{
-			NYX_LOG_TRACE(Platform, "Polling GLFW events");
 			glfwPollEvents();
 		}
 
 		void SwapBuffers() override
 		{
-			NYX_LOG_TRACE(Platform, "Swapping GLFW buffers");
 			glfwSwapBuffers(Window);
 		}
 
 		bool ShouldClose() const override
 		{
-			bool shouldClose = glfwWindowShouldClose(Window);
-			if (shouldClose)
-			{
-				NYX_LOG_INFO(Platform, "Window close requested");
-			}
-			return shouldClose;
+			return glfwWindowShouldClose(Window);
 		}
 
 	private:
@@ -92,7 +80,6 @@ namespace nyxara::platform
 	Window* CreateGLFWWindow(const WindowCreateInfo& info)
 	{
 		NYX_TRACE_FUNCTION(Platform);
-		NYX_LOG_DEBUG(Platform, "Creating GLFW window instance");
 		return new GLFWWindow(info);
 	}
 }

@@ -17,7 +17,14 @@ project(Nyxara VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
+# Core subdirectories
 add_subdirectory(src/nyxara/core/logging)
+
+# Platform subdirectories
 add_subdirectory(src/nyxara/platform)
+
+# Renderer subdirectories
+add_subdirectory(src/nyxara/renderer/vulkan)
+
 add_subdirectory(apps)
 add_subdirectory(docs)
